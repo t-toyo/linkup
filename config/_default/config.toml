@@ -1,0 +1,6 @@
+baseURL = "http://example.org/"
+languageCode = "ja-JP"
+title = "合同会社 Linkup"
+author = "豊嶋　隆之"
+description = "合同会社 Linkup 代表 豊嶋 のポートフォリオです"
+theme = "anatole"
