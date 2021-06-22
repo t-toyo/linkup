@@ -1,4 +1,49 @@
 baseURL = "http://example.org/"
 languageCode = "ja-JP"
-title = "My New Hugo Site"
+title = "合同会社 Linkup"
+author = "豊嶋 隆之"
+description = "合同会社 Linkup 代表 豊嶋 のポートフォリオです"
 theme = "anatole"
+copyright = "合同会社 Linkup, 2020-{{ YEAR }}"
+
+[menu]
+
+    [[menu.main]]
+    name = "Home"
+    identifier = "home"
+    weight = 100
+    url = "/"
+
+    [[menu.main]]
+    name = "Blog"
+    wight = 200
+    identifier = "blog"
+    url = "/blog/"
+
+    [[menu.main]]
+    name = "About"
+    weight = 300
+    identifier = "about"
+    url = "/about/"
+
+[params]
+  profilePicture = "images/avatar.png"
+  favicon = "favicon.ico"
+  readMore = true
+  postSectionName = "blog"
+  gtagId = "G-XXXXXXXXXX"
+  enable = true
+  singleDateFormat = "2006年 1月 2日"
+  indexDateFormat = "2006年 1月 2日"
+  listDateFormat = "1月 2日"
+  disableThemeSwitcher = true
+
+  [[params.socialIcons]]
+    icon = "fab fa-linkedin"
+    title = "Linkedin"
+    url = "https://www.linkedin.com/in/takayuki-toyoshima/"
+
+  [[params.socialIcons]]
+    icon = "fas fa-envelope"
+    title = "e-mail"
+    url = "mailto:toyoshima@linkup.works"
