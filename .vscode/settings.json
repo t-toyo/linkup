@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 2,
+    "editor.cursorSmoothCaretAnimation": true,
+    "html.format.wrapLineLength": 80,
+    "editor.minimap.maxColumn": 80,
+    "editor.wordWrap": "bounded",
+}

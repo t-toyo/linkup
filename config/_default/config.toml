@@ -4,3 +4,9 @@ title = "合同会社 Linkup"
 author = "豊嶋　隆之"
 description = "合同会社 Linkup 代表 豊嶋 のポートフォリオです"
 theme = "anatole"
+HasCJKLanguage = true
+summaryLength = 100
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

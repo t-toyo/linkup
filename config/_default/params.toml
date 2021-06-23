@@ -1,6 +1,6 @@
 copyright = "合同会社 Linkup, 2020-{{ YEAR }}"
 profilePicture = "images/avatar.png"
-favicon = "images/favicon.ico"
+favicon = "images/favicon"
 readMore = true
 postSectionName = "blog"
 gtagId = "G-XXXXXXXXXX"
@@ -8,6 +8,8 @@ enable = true
 singleDateFormat = "2006年 1月 2日"
 indexDateFormat = "2006年 1月 2日"
 listDateFormat = "1月 2日"
+readingTime = true
+socialShare = true
 
 [[socialIcons]]
   icon = "fab fa-linkedin"
