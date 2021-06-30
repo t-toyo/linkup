@@ -1,59 +1,54 @@
+{{ define "body-class" }}
+    {{ $TOCEnabled := default (default false .Site.Params.article.toc) .Params.toc }}
+    {{- .Scratch.Set "hasTOC" (and (ge (len .TableOfContents) 100) $TOCEnabled) -}}
+    article-page {{ if (.Scratch.Get "hasTOC") }}has-toc{{ end }}
+{{ end }}
+
+{{ define "container-class" }}
+    {{ if (.Scratch.Get "hasTOC") }}
+        extended
+    {{ else }}
+        on-phone--column {{ if .Site.Params.widgets.enabled }}extended{{ else }}compact{{ end }}
+    {{ end }}
+{{ end }}
+
 {{ define "main" }}
-    <div class="post {{ with .Site.Params.doNotLoadAnimations }} . {{ else }} animated fadeInDown {{ end }}">
-        <div class="post-content">
-            {{ if .Params.thumbnail }}
-            <img class="post-thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image">
-            {{ end }}
-            <div class="post-title">
-                <h3>{{ .Title }}</h3>
-                {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date">{{ if isset .Site.Params "singledateformat" }} 
-                                                {{ .Date.Format .Site.Params.singleDateFormat }}
-                                           {{ else }} {{.Date.Format "Mon, Jan 2, 2006"}} 
-                                           {{ end }}</span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">{{ i18n "reading_time" .ReadingTime }}</span>
-                    </div>
-                {{ end }}
-            </div>
-            <h2>目次</h2>
-            {{ .TableOfContents }}
-            {{ .Content }}
+    {{ partial "article/article.html" . }}
 
-            {{- if (eq .Params.contact true) -}}
-              {{- partial "contact.html" . -}}
-            {{- end -}}
+    {{ partial "article/components/related-contents" . }}
+     
+    {{ if or (not (isset .Params "comments")) (eq .Params.comments "true")}} 
+        {{ partial "comments/include" . }}
+    {{ end }}
 
+    {{ partialCached "footer/footer" . }}
+
+    {{ partialCached "article/components/photoswipe" . }}
+{{ end }}
+
+{{ define "left-sidebar" }}
+    {{ if (.Scratch.Get "hasTOC") }}
+        <div id="article-toolbar">
+            <a href="{{ .Site.BaseURL }}" class="back-home">
+                {{ (resources.Get "icons/back.svg").Content | safeHTML }}
+                <span>{{ T "article.back" }}</span>
+            </a>
         </div>
-        <div class="post-footer">
-            <div class="info">
-                {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
-                {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
-            </div>
-        </div>
+    {{ else }}
+        {{ partial "sidebar/left.html" . }}
+    {{ end }}
+{{ end }}
 
-        {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName)) (ne .Page.Params.disableComments true) }}
-            {{- if .Site.DisqusShortname -}}
-                <div id="fb_comments_container">
-                    <h2>{{ i18n "comments" }}</h2>
-                    {{ template "_internal/disqus.html" . }}
+{{ define "right-sidebar" }}
+    {{ if (.Scratch.Get "hasTOC") }}
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <h2 class="widget-title section-title">{{ T "article.tableOfContents" }}</h2>
+                
+                <div class="widget--toc">
+                    {{ .TableOfContents }}
                 </div>
-            {{- end -}}
-            {{- if .Site.Params.utterances.repo -}}
-            <div id="fb_comments_container">
-                <h2>{{ i18n "comments" }}</h2>
-                {{ partial "comments/utterances.html" . }}
-            </div>
-            {{- end -}}
-            {{- if .Site.Params.CommentoURL -}}
-            <div id="fb_comments_container">
-                <h2>{{ i18n "comments" }}</h2>
-                {{ partial "comments/commento.html" . }}
-            </div>
-            {{- end -}}
-        {{ end }}
-    </div>
-
+            </section>
+        </aside>
+    {{ end }}
 {{ end }}
