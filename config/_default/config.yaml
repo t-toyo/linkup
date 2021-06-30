@@ -35,7 +35,7 @@ params:
         subtitle: 主にインフラ(サーバー、ミドルウェア)をメインに、SaaS 導入、Ruby(Rails)、Python(Django)を少々。広く浅くやってきました。
         avatar:
             local: true
-            src: img/avatar.png
+            src: img/avatar.webp
 
     article:
         math: false
