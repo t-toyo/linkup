@@ -20,7 +20,7 @@ params:
         - blog
     featuredImageField: image
     rssFullContent: true
-    favicon: img/favicon
+    favicon: favicon.ico
 
     footer:
         since: 2020
@@ -125,19 +125,17 @@ params:
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
-        - identifier: home
-          name: Home
-          url: /
+        - identifier: about
+          name: About
+          url: /about
           weight: 100
-          pre: home
+          pre: user
 
-    main:
         - identifier: blog
           name: Blog
           url: /blog
           weight: 200
           pre: note
-
 
 related:
     includeNewer: true

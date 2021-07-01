@@ -1,33 +1,30 @@
 ---
 title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+description: 
+date: '2021-07-01'
 aliases:
-  - about-us
-  - about-hugo
-  - contact
+- about-us
+- contact
 license: CC BY-NC-ND
-lastmod: '2020-10-09'
-menu:
-    main: 
-        weight: -90
-        pre: user
+lastmod: '2021-07-01'
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+## スキル
+いずれのスキルも実業務で数ヶ月以上の利用実績があります。
 
-Hugo makes use of a variety of open source projects including:
+| 分類 | 技術|
+| -------------- | ------ |
+| OS | Windows Server, Cent OS, Ubuntu |
+| DB| MySQL,PostgreSQL|
+| Lang | Ruby, Python, PowerShell, JavaScript, Google Apps Script, Visual Basic .Net |
+| FW | Django, Ruby on Rails, .Net Framework | 
+| Misc| Zabbix, Elasticsearch, Kibana, Logstash, Twilio, Vagrant, Ansible, Git, GitLab/CI , Redmine, Serverspec, Itamae, Active Directory, WSUS , IIS , WSFC , Bootstrap 4, UIkit , GLPI , Redmine,Docker, Docker Compose, Google Workspace, Microsoft 365, kintone, Salesforce, Github, AWS(VPC、EC2、VPNGateway), Juniper(L2スイッチ), FortiGate, VMware vSphere , Xen|
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+## 資格
+| 資格| 取得日 |
+| -------------------- | ------ |
+| Microsoft 認定技術者 | 2007年 |
+| 応用情報技術者| 2018年 |
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
-
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+## 職務経歴詳細
+職務経歴についてはこちらの [LinkedInのプロフィール](https://www.linkedin.com/in/takayuki-toyoshima/) をご覧ください。
