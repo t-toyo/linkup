@@ -3,7 +3,7 @@ title: "クラウドを活用したニューノーマルな働き方の事例"
 description: 
 date: 2021-04-16T18:11:48+09:00
 categories: [ "業務改善" ]
-tags: ["事務作業"]
+tags: ["Dialpad","Google Drive","Google Workspace","SaaS","freee会計"]
 image: c-utopix-stockpack-unsplash.webp
 draft: false
 ---

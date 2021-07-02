@@ -2,8 +2,8 @@
 title: "オンラインFAX でもっと手軽に FAX を送る方法"
 description: 
 date: 2021-04-08T18:12:44+09:00
-categories: [ "業務改善" ]
-tags: ["事務作業"]
+categories: [ "業務改善","HowTo" ]
+tags: ["オンラインFAX","SaaS"]
 image: fax.webp
 draft: false
 ---

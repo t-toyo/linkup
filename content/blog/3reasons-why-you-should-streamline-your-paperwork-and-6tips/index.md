@@ -1,8 +1,8 @@
 ---
 title: "事務作業を効率化すべき3つの理由と6つのコツ"
 date: 2021-06-22T18:00:41+09:00
-categories: [ "業務改善" ]
-tags: ["事務作業"]
+categories: [ "業務改善", "HowTo" ]
+tags: ["事務作業","効率化","台帳管理"]
 image: filip-urban-ffJ8Qa0VQU0-unsplash.webp
 draft: false
 ---

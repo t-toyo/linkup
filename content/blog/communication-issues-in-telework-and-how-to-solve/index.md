@@ -2,8 +2,8 @@
 title: "テレワークでのコミュニケーションの課題と、解決の工夫"
 description: 
 date: 2021-03-22T19:09:00+09:00
-categories: [ "業務改善" ]
-tags: ["事務作業"]
+categories: [ "HowTo" ]
+tags: ["コミュニケーション","テレワーク"]
 image: pexels-photo-4050469.webp
 draft: false
 ---

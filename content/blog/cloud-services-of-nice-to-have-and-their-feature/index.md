@@ -3,7 +3,7 @@ title: "使うと便利なクラウドのサービスとその特徴"
 description: 
 date: 2021-03-09T19:16:51+09:00
 categories: [ "業務改善" ]
-tags: ["事務作業"]
+tags: ["SaaS", "クラウド"]
 image: beautiful-landscape-stockpack-unsplash.webp
 draft: false
 ---
