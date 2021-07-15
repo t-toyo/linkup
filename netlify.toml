@@ -31,7 +31,7 @@ HUGO_ENABLEGITINFO = "true"
 
 [[redirects]]
   from = "/2021/05/12/tips-and-limitations-of-creating-an-excel-ledger/"
-  to = "/tips-and-limitations-of-creating-an-excel-ledger/"
+  to = "/blog/tips-and-limitations-of-creating-an-excel-ledger/"
   status = 301
   force = true
   headers = {X-From = "Netlify"}
