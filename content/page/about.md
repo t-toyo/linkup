@@ -2,11 +2,11 @@
 title: About
 description: 
 date: '2021-07-01'
+lastmod: :git
 aliases:
 - about-us
 - contact
 license: CC BY-NC-ND
-lastmod: '2021-07-08'
 ---
 
 ## スキル

@@ -11,6 +11,8 @@ googleAnalytics: G-LE6DSE391M
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl
 DefaultContentLanguage: ja
 
+enableGitInfo: true
+
 permalinks:
     post: /p/:slug/
     page: /:slug/
@@ -136,6 +138,12 @@ menu:
           url: /blog
           weight: 200
           pre: note
+
+        - identifier: store
+          name: Store
+          url: /store
+          weight: 300
+          pre: basket
 
 related:
     includeNewer: true

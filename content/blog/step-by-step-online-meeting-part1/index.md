@@ -2,6 +2,7 @@
 title: "オンライン会議のはじめの一歩 | 必要なもの"
 description: 
 date: 2021-02-24T09:10:00+09:00
+lastmod: :git
 categories: [ "業務改善","HowTo" ]
 tags: ["Google Meet","オンライン会議"]
 image: online-meeting.webp

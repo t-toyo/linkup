@@ -2,6 +2,7 @@
 title: "WindowsUpdateとアップデートしないリスク"
 description: 
 date: 2020-11-19T10:22:00+09:00
+lastmod: :git
 categories: [ "セキュリティ" ]
 tags: ["Windows 10", "Windows Update"]
 image: tadas-sar-T01GZhBSyMQ-unsplash.webp

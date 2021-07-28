@@ -25,7 +25,6 @@ command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.84.0"
-
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
 
@@ -35,3 +34,6 @@ HUGO_ENABLEGITINFO = "true"
   status = 301
   force = true
   headers = {X-From = "Netlify"}
+  
+[build.environment]
+  TZ="Asia/Tokyo"

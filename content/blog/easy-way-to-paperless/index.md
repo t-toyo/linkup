@@ -2,6 +2,7 @@
 title: "GoogleDriveとスマホアプリでお手軽ペーパーレス"
 description: 
 date: 2020-11-30T15:11:00+09:00
+lastmod: :git
 categories: [ "業務改善","HowTo" ]
 tags: ["Adobe Scan", "Google Drive", "Google Workspace", "ペーパーレス"]
 image: pexels-photo-357514.webp

@@ -2,6 +2,7 @@
 title: "小規模企業でも IT の投資対効果を出す3つの方法"
 description: 
 date: 2021-02-05T19:06:00+09:00
+lastmod: :git
 categories: [ "業務改善", "howTo"]
 tags: ["クラウド", "補助金"]
 image: pexels-photo-4947386.webp

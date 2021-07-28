@@ -1,6 +1,7 @@
 ---
 title: "事務作業を効率化すべき3つの理由と6つのコツ"
 date: 2021-06-22T18:00:41+09:00
+lastmod: :git
 categories: [ "業務改善", "HowTo" ]
 tags: ["事務作業","効率化","台帳管理"]
 image: filip-urban-ffJ8Qa0VQU0-unsplash.webp
@@ -112,7 +113,7 @@ draft: false
 まずはじめに業務の手順書を作ります。手順書を作ることによって業務の流れを見えるようにします。
 こちらの記事でもご紹介していますが、業務の一連の流れを書き出すことから始めます。
 
-https://www.linkup.works/2020/11/17/how-to-operation-improvement/
+[業務の効率化と成果に結びつく進め方]({{< ref "how-to-operation-improvement/index.md" >}})
 
 ここでのコツは、箇条書きで書く、インプットとアウトプットを書くということです。
 手順を文章にすると作業がわかりにくくなります。例えば同じ作業でも次のような書き方だとすごくわかりにくいと思います。

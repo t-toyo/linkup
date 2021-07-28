@@ -2,9 +2,11 @@
 title: "オンラインFAX でもっと手軽に FAX を送る方法"
 description: 
 date: 2021-04-08T18:12:44+09:00
+lastmod: :git
 categories: [ "業務改善","HowTo" ]
 tags: ["オンラインFAX","SaaS"]
 image: fax.webp
+lastmod: :git
 draft: false
 ---
 何らかの申込書などを送る際に、メールでは受け付けておらず、FAXまたは郵送で送らなければならないことがあります。
@@ -59,5 +61,4 @@ FAX を送らなければならなくなったときに、オンラインで利�
    
 ## Tips
 送りたい文書が紙でしかない場合、簡単に PDF にするにはこちらの記事で紹介している Adobe Scan を使うととても便利です。文書をアプリでスキャンし、PDF にすることができます。
-
-<a href="https://www.linkup.works/2020/11/30/easy-way-to-paperless/" target="_blank" rel="noreferrer noopener">Google Drive とスマホアプリで簡単ペーパーレス</a>
+[Google Drive とスマホアプリで簡単ペーパーレス]({{< ref "easy-way-to-paperless/index.md" >}})

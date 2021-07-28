@@ -2,6 +2,7 @@
 title: "業務の効率化と成果に結びつく進め方"
 description: 
 date: 2020-11-17T19:17:00+09:00
+lastmod: :git
 categories: [ "業務改善" ]
 tags: ["事務作業"]
 image: pexels-photo-3183197.webp

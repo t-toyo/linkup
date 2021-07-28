@@ -2,6 +2,7 @@
 title: "クラウドを活用するメリットとデメリット"
 description: 
 date: 2021-02-08T18:45:00+09:00
+lastmod: :git
 categories: [ "セキュリティ" ]
 tags: ["クラウド"]
 image: cloud.webp

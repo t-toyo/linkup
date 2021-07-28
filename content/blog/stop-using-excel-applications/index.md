@@ -2,6 +2,7 @@
 title: "そろそろやめませんか Excel 申請書"
 description: 
 date: 2021-04-26T17:47:00+09:00
+lastmod: :git
 categories: [ "業務改善" ]
 tags: ["事務作業","Excel","Word","申請書"]
 image: pexels-skylar-kang-6207369-scaled.webp

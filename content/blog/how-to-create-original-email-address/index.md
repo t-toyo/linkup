@@ -2,6 +2,7 @@
 title: "会社独自のメールアドレスを作るには？"
 description: 
 date: 2020-11-24T09:20:00+09:00
+lastmod: :git
 categories: [ "業務改善" ]
 tags: ["Google Workspace", "Microsoft 365", "SaaS"]
 image: pexels-photo-3059854.webp

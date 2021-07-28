@@ -2,6 +2,7 @@
 title: "Windows 10 のサポート期限をご確認ください"
 description: 
 date: 2021-01-19T11:43:00+09:00
+lastmod: :git
 categories: [ "セキュリティ" ]
 tags: ["Windows 10","Windows Update"]
 image: update.webp
@@ -34,11 +35,4 @@ Windows 10 のバージョンは以下の手順で確認できます。
 現在お使いのバージョンをご確認の上、古いバージョンを使っている場合は是非アップデートをしてみてください。
 Windows 10 のアップデートを行うにはこちらの記事もご覧ください。
 
-
-<!-- wp:embed {"url":"https://www.linkup.works/2020/11/19/what-is-windows-update/","type":"wp-embed","providerNameSlug":"中小企業様の業務改善パートナー-合同会社-linkup","className":""} -->
-<figure class="wp-block-embed is-type-wp-embed is-provider-中小企業様の業務改善パートナー-合同会社-linkup wp-block-embed-中小企業様の業務改善パートナー-合同会社-linkup"><div class="wp-block-embed__wrapper">
-https://www.linkup.works/2020/11/19/what-is-windows-update/
-</div></figure>
-<!-- /wp:embed -->
-
-<!-- wp:block {"ref":2388} /-->
+[WindowsUpdateとアップデートしないリスク]({{< ref "what-is-windows-update/index.md" >}})

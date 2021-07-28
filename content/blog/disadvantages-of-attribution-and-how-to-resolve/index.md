@@ -2,6 +2,7 @@
 title: "業務の属人化のデメリットと解消方法"
 description: 
 date: 2021-04-23T18:08:00+09:00
+lastmod: :git
 categories: [ "業務改善","HowTo" ]
 tags: ["ナレッジ","属人化","コラボレーション"]
 image: girl-friends-hands-piled-togethger-stockpack-unsplash.webp

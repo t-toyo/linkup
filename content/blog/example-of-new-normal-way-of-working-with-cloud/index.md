@@ -2,6 +2,7 @@
 title: "クラウドを活用したニューノーマルな働き方の事例"
 description: 
 date: 2021-04-16T18:11:48+09:00
+lastmod: :git
 categories: [ "業務改善" ]
 tags: ["Dialpad","Google Drive","Google Workspace","SaaS","freee会計"]
 image: c-utopix-stockpack-unsplash.webp
@@ -45,18 +46,8 @@ Google Drive に保存された Excel ファイルなどはダウンロードす
 また、Google ドライブの検索機能は非常に強力なのでファイルを探す時間も大幅に少なく、ファイルの共有も簡単にできるように設計されています。
 Google ドライブの活用方法や簡単にペーパーレスを試す方法などは、こちらの記事もご覧ください。
 
-
-<!-- wp:embed {"url":"https://www.linkup.works/2021/02/22/lets-use-google-drive","type":"wp-embed","providerNameSlug":"中小企業様の業務改善パートナー-合同会社-linkup","className":""} -->
-<figure class="wp-block-embed is-type-wp-embed is-provider-中小企業様の業務改善パートナー-合同会社-linkup wp-block-embed-中小企業様の業務改善パートナー-合同会社-linkup"><div class="wp-block-embed__wrapper">
-https://www.linkup.works/2021/02/22/lets-use-google-drive
-</div></figure>
-<!-- /wp:embed -->
-
-<!-- wp:embed {"url":"https://www.linkup.works/2020/11/30/easy-way-to-paperless/","type":"wp-embed","providerNameSlug":"中小企業様の業務改善パートナー-合同会社-linkup","className":""} -->
-<figure class="wp-block-embed is-type-wp-embed is-provider-中小企業様の業務改善パートナー-合同会社-linkup wp-block-embed-中小企業様の業務改善パートナー-合同会社-linkup"><div class="wp-block-embed__wrapper">
-https://www.linkup.works/2020/11/30/easy-way-to-paperless/
-</div></figure>
-<!-- /wp:embed -->
+[クラウドストレージの Google ドライブを活用しよう！]({{< ref "lets-use-google-drive/index.md" >}})
+[GoogleDriveとスマホアプリでお手軽ペーパーレス]({{< ref "easy-way-to-paperless/index.md" >}})
 
 ## 電話
 

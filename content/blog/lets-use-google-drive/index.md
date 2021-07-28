@@ -2,6 +2,7 @@
 title: "クラウドストレージの Google ドライブを活用しよう！"
 description: 
 date: 2021-02-22T09:15:00+09:00
+lastmod: :git
 categories: [ "業務改善","HowTo"]
 tags: ["Google Drive", "Google Workspace"]
 image: pexels-photo-4483608.webp
@@ -31,7 +32,9 @@ Google Workspace では Microsoft Office の互換ソフトであるドキュメ
 
 ## OCR、AI が利用できる
 Google ドライブに保存された画像やPDFファイルは、OCR(光学的文字認識)の処理が施され、画像や文書に記載されている文字列で検索することができます。
-この機能については<a href="https://www.linkup.works/2020/11/30/easy-way-to-paperless/" target="_blank" rel="noreferrer noopener">こちらの記事</a>でも詳しく紹介しています。
+こちらの記事でも詳しく紹介しています。
+
+[Google Drive とスマホアプリで簡単ペーパーレス]({{< ref "easy-way-to-paperless/index.md" >}})
 
 例えば様々な紙の文書をスキャンしてPDFにし、Google ドライブにアップロードすると、文書内の文字列で検索することができるようになります。
 また、Google Workspace で提供されいる様々なサービスには **AI** が組み込まれており、**検索キーワードを含んでいない文書でも内容を推測して検索結果に表示する**ことができます。

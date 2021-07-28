@@ -2,6 +2,7 @@
 title: "Excel での管理台帳作成のコツとその限界"
 description: 
 date: 2021-05-21T22:08:00+09:00
+lastmod: :git
 categories: [ "業務改善", "HowTo"]
 tags: ["事務作業","Excel"]
 image: white-graphing-paper-stockpack-pexels.webp
