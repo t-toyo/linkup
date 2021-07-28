@@ -1,6 +1,6 @@
 ---
 title: "テレワーク実践ガイド"
-description: 
+description: "初めてテレワークをするために、予めどのようなことを決めておいたらよいか、どういった進め方をしたらよいか、どんなツールを使ったらよいかなどを解説しています。"
 image: title.webp
 draft: false
 ---
