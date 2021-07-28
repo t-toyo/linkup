@@ -157,6 +157,12 @@ menu:
           weight: 500
           pre: secure
 
+        - identifier: specified-commercial-transactions
+          name: 特定商取引法に基づく表示
+          url: /specified-commercial-transactions
+          weight: 600
+          pre: secure
+
 related:
     includeNewer: true
     threshold: 60
