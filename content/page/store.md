@@ -15,7 +15,7 @@ lastmod: :git
 
 ぜひこのガイドでテレワークの持つ可能性を知っていただき、社内のデジタル化の第一歩を踏み出してみてはいかがでしょうか。
 
-{{< figure src="./telework-practice-guide/images/title.webp" alt="テレワーク実践ガイド" width=300 >}}
+{{< figure src="images/store/telework-practice-guide/title.webp" alt="テレワーク実践ガイド" width=300 >}}
 
 <details>
 <summary>目次</summary>
@@ -56,10 +56,10 @@ lastmod: :git
 <details>
 <summary>立ち読み</summary>
 
-![テレワーク実践ガイド1](store/telework-practice-guide/images/1.webp)
-![テレワーク実践ガイド2](store/telework-practice-guide/images/2.webp)
-![テレワーク実践ガイド3](store/telework-practice-guide/images/3.webp)
-![テレワーク実践ガイド4](store/telework-practice-guide/images/4.webp)
+![テレワーク実践ガイド1](images/store/telework-practice-guide/1.webp)
+![テレワーク実践ガイド2](images/store/telework-practice-guide/2.webp)
+![テレワーク実践ガイド3](images/store/telework-practice-guide/3.webp)
+![テレワーク実践ガイド4](images/store/telework-practice-guide/4.webp)
 
 </details>
 
