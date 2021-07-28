@@ -111,10 +111,10 @@ params:
 
     colorScheme:
         # Display toggle
-        toggle: true
+        toggle: false
 
         # Available values: auto, light, dark
-        default: auto
+        default: light
 
     imageProcessing:
         cover:
@@ -139,11 +139,11 @@ menu:
           weight: 200
           pre: note
 
-        # - identifier: store
-        #   name: Store
-        #   url: /store
-        #   weight: 300
-        #   pre: basket
+        - identifier: store
+          name: Store
+          url: /store
+          weight: 300
+          pre: basket
 
         - identifier: archive
           name: Archive
