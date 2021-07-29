@@ -127,6 +127,12 @@ params:
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
+        - identifier: search
+          name: Search
+          url: /search
+          weight: 10
+          pre: search
+
         - identifier: about
           name: About
           url: /about
