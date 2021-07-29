@@ -105,9 +105,9 @@ params:
 
     defaultImage:
         opengraph:
-            enabled: false
+            enabled: true
             local: false
-            src:
+            src: 
 
     colorScheme:
         # Display toggle
