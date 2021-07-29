@@ -1,10 +1,10 @@
 ---
 title: "在宅勤務だけじゃない5つのテレワークのメリット"
-date: "publishDate"
+date: 2021-07-29T16:22:00+09:00
 lastmod: :git
 categories: [ "テレワーク" ]
 tags: ["効率化"]
-image: 
+image: 5-benefits.webp
 draft: false
 ---
 
