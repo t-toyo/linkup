@@ -2,7 +2,8 @@
 title: "Excel で台帳を作るときの2つの重要なコツ"
 description: 
 date: 2021-07-30T16:42:16+09:00
-categories: [ "", "" ]
+categories: [ "HowTo", "業務改善" ]
+tags: ["Excel","管理台帳"]
 image: title.webp
 draft: false
 lastmod: :git
