@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 合同会社 Linkup</title>
+    <link>https://www.linkup.works/categories/</link>
+    <description>Recent content in Categories on 合同会社 Linkup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 03 Aug 2021 09:05:52 +0900</lastBuildDate><atom:link href="https://www.linkup.works/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HowTo</title>
+      <link>https://www.linkup.works/categories/howto/</link>
+      <pubDate>Tue, 03 Aug 2021 09:05:52 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/categories/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>業務改善</title>
+      <link>https://www.linkup.works/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/</link>
+      <pubDate>Tue, 03 Aug 2021 09:05:52 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>テレワーク</title>
+      <link>https://www.linkup.works/categories/%E3%83%86%E3%83%AC%E3%83%AF%E3%83%BC%E3%82%AF/</link>
+      <pubDate>Thu, 29 Jul 2021 16:22:00 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/categories/%E3%83%86%E3%83%AC%E3%83%AF%E3%83%BC%E3%82%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>セキュリティ</title>
+      <link>https://www.linkup.works/categories/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/</link>
+      <pubDate>Mon, 08 Feb 2021 18:45:00 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/categories/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

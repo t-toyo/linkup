@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>オンラインFAX on 合同会社 Linkup</title>
+    <link>https://www.linkup.works/tags/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3fax/</link>
+    <description>Recent content in オンラインFAX on 合同会社 Linkup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Thu, 08 Apr 2021 18:12:44 +0900</lastBuildDate><atom:link href="https://www.linkup.works/tags/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3fax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>オンラインFAX でもっと手軽に FAX を送る方法</title>
+      <link>https://www.linkup.works/blog/how-to-send-faxes-more-easily-with-online-fax-service/</link>
+      <pubDate>Thu, 08 Apr 2021 18:12:44 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/blog/how-to-send-faxes-more-easily-with-online-fax-service/</guid>
+      <description>何らかの申込書などを送る際に、メールでは受け付けておらず、FAXまたは郵送で送らなければならないことがあります。
+事務所の複合機で FAX を送れたとしても、テレワークをしているがために自宅にFAXがなく送れないといったことや、FAX を送るためにわざわざコンビニに行ったりしなければなりません。 ちなみに、世帯単位での FAX の保有状況を見ると、世帯主が20代、30代の場合、保有率が3.7%〜10.3%となっており、持っている方が珍しい状況です。
+ faxの保有状況  全国では1／3割強…FAXの保有状況をさぐる(2019年公開版)
+また、スタートアップではそもそも複合機がなかったりすることもあります。弊社も複合機、プリンタは持っていません。印刷が必要な場合は入居している創業支援施設で用意している複合機を使わせてもらっています。
+FAX を送らなければならなくなったときに、オンラインで利用できる FAX のサービスがいくつか存在します。今回は FAX.PLUS というサービスを使って無料で FAX を送信してみました。
+FAX.PLUS の料金体系 FAX.PLUSはインターネット経由で FAX を送受信できるオンラインFAXサービスです。海外製なので、ホームページの日本語が少々機械翻訳チックになっていますが、送信だけを行う場合は無料で利用できるため「急遽 FAX を送りたい」というときには非常に便利です。なお、受信したい場合は有料プランにしなければなりません。
+送信は10ページまで無料で利用できます。11ページ以上送信するには1ページ毎に0.20ドルがかかります。日本の番号に送る場合は1ページが2ページとしてカウントされるようですので、実質5ページが無料で送信できます。
+ FAX.PLUS料金 
+FAX.PLUS に登録する   画面右上の『サインアップ無料(Sign Up For Free)』をクリックします。  FAX.PLUS(英語) 　 FAX.PLUS(日本語) 
+  メールアドレスまたは、Facebook や Google アカウントでサインアップします。  サインアップ 
+  続いて電話番号での認証を行います。『+81』の後ろに携帯番号を入力し、「Confirm」をクリックします。  携帯番号の認証 
+  入力した電話番号に SMS が届くので6桁のコードを入力します。
+  ユーザー登録が完了すると、Archive ページが表示されます。  Archiveページ</description>
+    </item>
+    
+  </channel>
+</rss>

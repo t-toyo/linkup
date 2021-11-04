@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='このブログでは度々、『クラウド』というキーワードを何気なく使ってきました。インターネットで IT のサービスを検索しても、クラウドというキーワードはごく自然に使われるようになりました。今回はいつの間にか定着している『クラウド』とはなにか、そしてどんなメリット、デメリットがあるかをご紹介します。
+クラウドとは？ Wikipedia ではクラウドについてこのように解説されています。
+ クラウドコンピューティング（英: cloud computing）は、インターネットなどのコンピュータネットワークを経由して、コンピュータ資源をサービスの形で提供する利用形態である[1]。略してクラウドと呼ばれることも多く、cloud とは英語で「雲」を意味する。
+ もう少し噛み砕いて説明すると、アプリケーションやコンピュータによる演算能力、アプリケーションを動作させるための環境などをインターネットを使って利用するというものです。利用するという事がポイントで、従来のソフトウェアやサーバーなどのコンピュータなどは購入して所有していました。
+しかし、クラウドではアプリケーションを月額XXX円で利用したり、サーバーの利用を申し込んで、稼働した時間分を従量課金で支払ったりします。身近な例ではオンライン会議ツールの Zoom や保存領域の Dropbox、ホームページを作成できる Wix、コミュニケーションツールの LINE もクラウドの一つです。
+クラウドのメリット では、こうしたアプリケーションやサーバーを所有せずに利用するようになったことで、どんなメリットが生まれたのでしょうか。
+初期費用が安価になった 一番のメリットとしてあげられるのは初期費用が非常に安価になったことです。例えば、Office ソフトや共有の保存領域などを提供しているコラボレーションツールと呼ばれるアプリケーションがあります。Microsoft では Microsoft 365、Google では Google Workspace があり、どちらも1ユーザー数百円からスタートすることができます。また、どちらも無料期間があります。
+ Google Workspace   Microsoft 365 
+どちらのツールでも、Officeソフト(表計算、文書、スライド)、メール、オンライン会議、共有の保存領域などが提供されています。パソコンだけでなく、スマホやタブレットでも利用できるので、上位のプランではこうしたデバイスの管理を行うことができます。
+これまでは、社内でコラボレーションツールを利用する場合、システムを稼働させるためのサーバーやネットワーク機器を購入し、ツールのライセンス、ユーザーのライセンスなどを購入する必要がありました。社員数やシステムの構成にもよりますが、数千万円〜数億円ほどがかかる場合がありました。
+社員数の少ない企業であれば、高額な初期費用がネックになってコラボレーションツールの導入が進んでいなかったということもありましたが、クラウドで提供されるようになり導入のハードルはかなり下がっていると考えています。
+すぐに使える、すぐに止められる これまでは様々な機器を用意したり、購入したアプリケーションをインストールしたり、すぐに利用を始めることはできませんでした。そして、そのアプリケーションや機器を購入しているために、止める場合には大きな損失になってしまっていました。クラウドで提供されるツールなどはすぐに使い始めることができます。
+上記の Google Workspace や Microsoft 365 はユーザー登録さえすればお試し期間が始まります。従業員が増えたときなどは、すぐにライセンスを追加することができますし、余ったライセンスは削減することができるので、社員数の増減に柔軟に対応することができます。
+また、もし止めたくなった場合はすぐに止めることができます。(実際はデータの移行や保存が必要になる場合が殆どなので、止めることが簡単というわけではありません)
+高度なセキュリティ基準に準拠している 便利で安価に始められるとはいえ、社内のデータをインターネット上に保存するのは不安。という方もいると思います。しかし、Google、Microsoft が準拠しているセキュリティの基準は非情に高度で、データはすべてこうした基準のもとで管理されます。
+ Google Workspace のセキュリティと信頼   Microsoft コンプライアンスのサービス 
+Google、Microsoft 共に取得している認証やセキュリティの規格には次のようなものがあります。
+ ISO/IEC 27017 ISO/IEC 27018 PCI DSS GDPR: 一般データ保護規則  セキュリティや設備に関する投資額は両社とも年間数千億円規模とも言われ、莫大な費用をかけて維持しています。'><title>クラウドを活用するメリットとデメリット</title>
+
+<link rel='canonical' href='https://www.linkup.works/blog/what-is-cloud-merits-and-demerits/'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="/css/sharebutton.css">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='クラウドを活用するメリットとデメリット'>
+<meta property='og:description' content='このブログでは度々、『クラウド』というキーワードを何気なく使ってきました。インターネットで IT のサービスを検索しても、クラウドというキーワードはごく自然に使われるようになりました。今回はいつの間にか定着している『クラウド』とはなにか、そしてどんなメリット、デメリットがあるかをご紹介します。
+クラウドとは？ Wikipedia ではクラウドについてこのように解説されています。
+ クラウドコンピューティング（英: cloud computing）は、インターネットなどのコンピュータネットワークを経由して、コンピュータ資源をサービスの形で提供する利用形態である[1]。略してクラウドと呼ばれることも多く、cloud とは英語で「雲」を意味する。
+ もう少し噛み砕いて説明すると、アプリケーションやコンピュータによる演算能力、アプリケーションを動作させるための環境などをインターネットを使って利用するというものです。利用するという事がポイントで、従来のソフトウェアやサーバーなどのコンピュータなどは購入して所有していました。
+しかし、クラウドではアプリケーションを月額XXX円で利用したり、サーバーの利用を申し込んで、稼働した時間分を従量課金で支払ったりします。身近な例ではオンライン会議ツールの Zoom や保存領域の Dropbox、ホームページを作成できる Wix、コミュニケーションツールの LINE もクラウドの一つです。
+クラウドのメリット では、こうしたアプリケーションやサーバーを所有せずに利用するようになったことで、どんなメリットが生まれたのでしょうか。
+初期費用が安価になった 一番のメリットとしてあげられるのは初期費用が非常に安価になったことです。例えば、Office ソフトや共有の保存領域などを提供しているコラボレーションツールと呼ばれるアプリケーションがあります。Microsoft では Microsoft 365、Google では Google Workspace があり、どちらも1ユーザー数百円からスタートすることができます。また、どちらも無料期間があります。
+ Google Workspace   Microsoft 365 
+どちらのツールでも、Officeソフト(表計算、文書、スライド)、メール、オンライン会議、共有の保存領域などが提供されています。パソコンだけでなく、スマホやタブレットでも利用できるので、上位のプランではこうしたデバイスの管理を行うことができます。
+これまでは、社内でコラボレーションツールを利用する場合、システムを稼働させるためのサーバーやネットワーク機器を購入し、ツールのライセンス、ユーザーのライセンスなどを購入する必要がありました。社員数やシステムの構成にもよりますが、数千万円〜数億円ほどがかかる場合がありました。
+社員数の少ない企業であれば、高額な初期費用がネックになってコラボレーションツールの導入が進んでいなかったということもありましたが、クラウドで提供されるようになり導入のハードルはかなり下がっていると考えています。
+すぐに使える、すぐに止められる これまでは様々な機器を用意したり、購入したアプリケーションをインストールしたり、すぐに利用を始めることはできませんでした。そして、そのアプリケーションや機器を購入しているために、止める場合には大きな損失になってしまっていました。クラウドで提供されるツールなどはすぐに使い始めることができます。
+上記の Google Workspace や Microsoft 365 はユーザー登録さえすればお試し期間が始まります。従業員が増えたときなどは、すぐにライセンスを追加することができますし、余ったライセンスは削減することができるので、社員数の増減に柔軟に対応することができます。
+また、もし止めたくなった場合はすぐに止めることができます。(実際はデータの移行や保存が必要になる場合が殆どなので、止めることが簡単というわけではありません)
+高度なセキュリティ基準に準拠している 便利で安価に始められるとはいえ、社内のデータをインターネット上に保存するのは不安。という方もいると思います。しかし、Google、Microsoft が準拠しているセキュリティの基準は非情に高度で、データはすべてこうした基準のもとで管理されます。
+ Google Workspace のセキュリティと信頼   Microsoft コンプライアンスのサービス 
+Google、Microsoft 共に取得している認証やセキュリティの規格には次のようなものがあります。
+ ISO/IEC 27017 ISO/IEC 27018 PCI DSS GDPR: 一般データ保護規則  セキュリティや設備に関する投資額は両社とも年間数千億円規模とも言われ、莫大な費用をかけて維持しています。'>
+<meta property='og:url' content='https://www.linkup.works/blog/what-is-cloud-merits-and-demerits/'>
+<meta property='og:site_name' content='合同会社 Linkup'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:tag' content='クラウド' /><meta property='article:published_time' content='2021-02-08T18:45:00&#43;09:00'/><meta property='article:modified_time' content='2021-07-28T17:05:54&#43;09:00'/><meta property='og:image' content='https://www.linkup.works/blog/what-is-cloud-merits-and-demerits/cloud.webp' />
+<meta name="twitter:site" content="@toyocy">
+    <meta name="twitter:creator" content="@toyocy"><meta name="twitter:title" content="クラウドを活用するメリットとデメリット">
+<meta name="twitter:description" content="このブログでは度々、『クラウド』というキーワードを何気なく使ってきました。インターネットで IT のサービスを検索しても、クラウドというキーワードはごく自然に使われるようになりました。今回はいつの間にか定着している『クラウド』とはなにか、そしてどんなメリット、デメリットがあるかをご紹介します。
+クラウドとは？ Wikipedia ではクラウドについてこのように解説されています。
+ クラウドコンピューティング（英: cloud computing）は、インターネットなどのコンピュータネットワークを経由して、コンピュータ資源をサービスの形で提供する利用形態である[1]。略してクラウドと呼ばれることも多く、cloud とは英語で「雲」を意味する。
+ もう少し噛み砕いて説明すると、アプリケーションやコンピュータによる演算能力、アプリケーションを動作させるための環境などをインターネットを使って利用するというものです。利用するという事がポイントで、従来のソフトウェアやサーバーなどのコンピュータなどは購入して所有していました。
+しかし、クラウドではアプリケーションを月額XXX円で利用したり、サーバーの利用を申し込んで、稼働した時間分を従量課金で支払ったりします。身近な例ではオンライン会議ツールの Zoom や保存領域の Dropbox、ホームページを作成できる Wix、コミュニケーションツールの LINE もクラウドの一つです。
+クラウドのメリット では、こうしたアプリケーションやサーバーを所有せずに利用するようになったことで、どんなメリットが生まれたのでしょうか。
+初期費用が安価になった 一番のメリットとしてあげられるのは初期費用が非常に安価になったことです。例えば、Office ソフトや共有の保存領域などを提供しているコラボレーションツールと呼ばれるアプリケーションがあります。Microsoft では Microsoft 365、Google では Google Workspace があり、どちらも1ユーザー数百円からスタートすることができます。また、どちらも無料期間があります。
+ Google Workspace   Microsoft 365 
+どちらのツールでも、Officeソフト(表計算、文書、スライド)、メール、オンライン会議、共有の保存領域などが提供されています。パソコンだけでなく、スマホやタブレットでも利用できるので、上位のプランではこうしたデバイスの管理を行うことができます。
+これまでは、社内でコラボレーションツールを利用する場合、システムを稼働させるためのサーバーやネットワーク機器を購入し、ツールのライセンス、ユーザーのライセンスなどを購入する必要がありました。社員数やシステムの構成にもよりますが、数千万円〜数億円ほどがかかる場合がありました。
+社員数の少ない企業であれば、高額な初期費用がネックになってコラボレーションツールの導入が進んでいなかったということもありましたが、クラウドで提供されるようになり導入のハードルはかなり下がっていると考えています。
+すぐに使える、すぐに止められる これまでは様々な機器を用意したり、購入したアプリケーションをインストールしたり、すぐに利用を始めることはできませんでした。そして、そのアプリケーションや機器を購入しているために、止める場合には大きな損失になってしまっていました。クラウドで提供されるツールなどはすぐに使い始めることができます。
+上記の Google Workspace や Microsoft 365 はユーザー登録さえすればお試し期間が始まります。従業員が増えたときなどは、すぐにライセンスを追加することができますし、余ったライセンスは削減することができるので、社員数の増減に柔軟に対応することができます。
+また、もし止めたくなった場合はすぐに止めることができます。(実際はデータの移行や保存が必要になる場合が殆どなので、止めることが簡単というわけではありません)
+高度なセキュリティ基準に準拠している 便利で安価に始められるとはいえ、社内のデータをインターネット上に保存するのは不安。という方もいると思います。しかし、Google、Microsoft が準拠しているセキュリティの基準は非情に高度で、データはすべてこうした基準のもとで管理されます。
+ Google Workspace のセキュリティと信頼   Microsoft コンプライアンスのサービス 
+Google、Microsoft 共に取得している認証やセキュリティの規格には次のようなものがあります。
+ ISO/IEC 27017 ISO/IEC 27018 PCI DSS GDPR: 一般データ保護規則  セキュリティや設備に関する投資額は両社とも年間数千億円規模とも言われ、莫大な費用をかけて維持しています。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://www.linkup.works/blog/what-is-cloud-merits-and-demerits/cloud.webp' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-TQPFW79");</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQPFW79" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "light");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.linkup.works" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>戻る</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/what-is-cloud-merits-and-demerits/">
+                <img src="/blog/what-is-cloud-merits-and-demerits/cloud_huda4ecc70cc162080333ee59be023e39e_22810_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/what-is-cloud-merits-and-demerits/cloud_huda4ecc70cc162080333ee59be023e39e_22810_800x0_resize_q75_h2_box_2.webp 800w, /blog/what-is-cloud-merits-and-demerits/cloud_huda4ecc70cc162080333ee59be023e39e_22810_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="517" 
+                        loading="lazy"
+                        alt="Featured image of post クラウドを活用するメリットとデメリット" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" >
+                セキュリティ
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/what-is-cloud-merits-and-demerits/">クラウドを活用するメリットとデメリット</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 2月 8日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>このブログでは度々、『クラウド』というキーワードを何気なく使ってきました。インターネットで IT のサービスを検索しても、クラウドというキーワードはごく自然に使われるようになりました。今回はいつの間にか定着している『クラウド』とはなにか、そしてどんなメリット、デメリットがあるかをご紹介します。</p>
+<h2 id="クラウドとは">クラウドとは？</h2>
+<p>Wikipedia ではクラウドについてこのように解説されています。</p>
+<blockquote>
+<p>クラウドコンピューティング（英: cloud computing）は、インターネットなどのコンピュータネットワークを経由して、コンピュータ資源をサービスの形で提供する利用形態である[1]。略してクラウドと呼ばれることも多く、cloud とは英語で「雲」を意味する。</p>
+</blockquote>
+<p>もう少し噛み砕いて説明すると、アプリケーションやコンピュータによる演算能力、アプリケーションを動作させるための環境などをインターネットを使って<strong>利用</strong>するというものです。<strong>利用する</strong>という事がポイントで、従来のソフトウェアやサーバーなどのコンピュータなどは購入して<strong>所有</strong>していました。</p>
+<p>しかし、クラウドではアプリケーションを月額XXX円で利用したり、サーバーの利用を申し込んで、稼働した時間分を従量課金で支払ったりします。身近な例ではオンライン会議ツールの Zoom や保存領域の Dropbox、ホームページを作成できる Wix、コミュニケーションツールの LINE もクラウドの一つです。</p>
+<h2 id="クラウドのメリット">クラウドのメリット</h2>
+<p>では、こうしたアプリケーションやサーバーを所有せずに利用するようになったことで、どんなメリットが生まれたのでしょうか。</p>
+<h3 id="初期費用が安価になった">初期費用が安価になった</h3>
+<p>一番のメリットとしてあげられるのは初期費用が非常に安価になったことです。例えば、Office ソフトや共有の保存領域などを提供しているコラボレーションツールと呼ばれるアプリケーションがあります。Microsoft では Microsoft 365、Google では Google Workspace があり、どちらも1ユーザー数百円からスタートすることができます。また、どちらも無料期間があります。</p>
+<p><figure style="flex-grow: 189; flex-basis: 453px">
+		<a href="/blog/what-is-cloud-merits-and-demerits/google-workspace.webp" data-size="2000x1058"><img src="/blog/what-is-cloud-merits-and-demerits/google-workspace.webp"
+				srcset="/blog/what-is-cloud-merits-and-demerits/google-workspace_hua6da99b3525d4d1084ee3de146a8def0_74646_480x0_resize_q75_h2_box_2.webp 480w, /blog/what-is-cloud-merits-and-demerits/google-workspace_hua6da99b3525d4d1084ee3de146a8def0_74646_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="1058"
+				loading="lazy"
+				alt="Google Workspace">
+		</a>
+		
+		<figcaption>Google Workspace</figcaption>
+		
+	</figure> <figure style="flex-grow: 189; flex-basis: 454px">
+		<a href="/blog/what-is-cloud-merits-and-demerits/ms365.webp" data-size="2000x1055"><img src="/blog/what-is-cloud-merits-and-demerits/ms365.webp"
+				srcset="/blog/what-is-cloud-merits-and-demerits/ms365_hu38db0dd503b58137aea36af799357065_107820_480x0_resize_q75_h2_box_2.webp 480w, /blog/what-is-cloud-merits-and-demerits/ms365_hu38db0dd503b58137aea36af799357065_107820_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="1055"
+				loading="lazy"
+				alt="Microsoft 365">
+		</a>
+		
+		<figcaption>Microsoft 365</figcaption>
+		
+	</figure></p>
+<p>どちらのツールでも、Officeソフト(表計算、文書、スライド)、メール、オンライン会議、共有の保存領域などが提供されています。パソコンだけでなく、スマホやタブレットでも利用できるので、上位のプランではこうしたデバイスの管理を行うことができます。</p>
+<p>これまでは、社内でコラボレーションツールを利用する場合、システムを稼働させるためのサーバーやネットワーク機器を購入し、ツールのライセンス、ユーザーのライセンスなどを購入する必要がありました。社員数やシステムの構成にもよりますが、<strong>数千万円〜数億円</strong>ほどがかかる場合がありました。</p>
+<p>社員数の少ない企業であれば、高額な初期費用がネックになってコラボレーションツールの導入が進んでいなかったということもありましたが、クラウドで提供されるようになり導入のハードルはかなり下がっていると考えています。</p>
+<h3 id="すぐに使えるすぐに止められる">すぐに使える、すぐに止められる</h3>
+<p>これまでは様々な機器を用意したり、購入したアプリケーションをインストールしたり、すぐに利用を始めることはできませんでした。そして、そのアプリケーションや機器を購入しているために、止める場合には大きな損失になってしまっていました。クラウドで提供されるツールなどはすぐに使い始めることができます。</p>
+<p>上記の Google Workspace や Microsoft 365 はユーザー登録さえすればお試し期間が始まります。従業員が増えたときなどは、すぐにライセンスを追加することができますし、余ったライセンスは削減することができるので、社員数の増減に柔軟に対応することができます。</p>
+<p>また、もし止めたくなった場合はすぐに止めることができます。(実際はデータの移行や保存が必要になる場合が殆どなので、止めることが簡単というわけではありません)</p>
+<h3 id="高度なセキュリティ基準に準拠している">高度なセキュリティ基準に準拠している</h3>
+<p>便利で安価に始められるとはいえ、社内のデータをインターネット上に保存するのは不安。という方もいると思います。しかし、Google、Microsoft が準拠しているセキュリティの基準は非情に高度で、データはすべてこうした基準のもとで管理されます。</p>
+<p><figure style="flex-grow: 203; flex-basis: 488px">
+		<a href="/blog/what-is-cloud-merits-and-demerits/Google%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3.webp" data-size="2000x982"><img src="/blog/what-is-cloud-merits-and-demerits/Google%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3.webp"
+				srcset="/blog/what-is-cloud-merits-and-demerits/Google%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3_hucd86e3464766d54ee1349e71dd35adf6_57454_480x0_resize_q75_h2_box_2.webp 480w, /blog/what-is-cloud-merits-and-demerits/Google%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3_hucd86e3464766d54ee1349e71dd35adf6_57454_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="982"
+				loading="lazy"
+				alt="Google Workspace のセキュリティと信頼">
+		</a>
+		
+		<figcaption>Google Workspace のセキュリティと信頼</figcaption>
+		
+	</figure> <figure style="flex-grow: 200; flex-basis: 481px">
+		<a href="/blog/what-is-cloud-merits-and-demerits/MS%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3.webp" data-size="2000x996"><img src="/blog/what-is-cloud-merits-and-demerits/MS%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3.webp"
+				srcset="/blog/what-is-cloud-merits-and-demerits/MS%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3_hubb149c029d91726bf0dcc39c1b2e7fa8_64680_480x0_resize_q75_h2_box_2.webp 480w, /blog/what-is-cloud-merits-and-demerits/MS%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3_hubb149c029d91726bf0dcc39c1b2e7fa8_64680_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="996"
+				loading="lazy"
+				alt="Microsoft コンプライアンスのサービス">
+		</a>
+		
+		<figcaption>Microsoft コンプライアンスのサービス</figcaption>
+		
+	</figure></p>
+<p>Google、Microsoft 共に取得している認証やセキュリティの規格には次のようなものがあります。</p>
+<ul>
+<li>ISO/IEC 27017</li>
+<li>ISO/IEC 27018</li>
+<li>PCI DSS</li>
+<li>GDPR: 一般データ保護規則</li>
+</ul>
+<p>セキュリティや設備に関する投資額は両社とも<strong>年間数千億円規模</strong>とも言われ、莫大な費用をかけて維持しています。</p>
+<h2 id="クラウドのデメリット">クラウドのデメリット</h2>
+<h3 id="基本的にセルフサービス">基本的にセルフサービス</h3>
+<p>クラウドで提供される様々なサービスは基本的にはセルフサービスで利用します。そのため、利用を開始するにはユーザー自身で申し込むことが基本となります。また、手取り足取りの説明や教育、導入支援などは提供元では行っていないことも多く、わからないことがあった時は、ヘルプページやブログなどを参考に、自分で解決しなければならないこともあります。</p>
+<p>しかし、こうしたデメリットも最近では大きなデメリットではなくなってきています。導入支援を行っている企業の存在や、無料のチャットでのサポート、導入支援の相談やパートナーの紹介などのサービスを提供している場合もあり、利用者が感じる不便は小さくなりつつあります。</p>
+<h3 id="使いこなすにはそれなりにスキルが必要">使いこなすにはそれなりにスキルが必要</h3>
+<p>セルフサービスということもあり、クラウドを活かすも殺すも利用者次第による部分が大きいです。機能のごく一部しか利用していなかったり、利用できる全員が使っていなかったりと言ったことはよくあります。提供されている機能やサービスが多いことも、使いこなすことのハードルの高さにつながっている場合があります。</p>
+<p>また、それなりの IT スキルが必要になることも多く、社内で IT に詳しい人に管理業務や利用についての相談が集中したり、頻繁なアップデートにキャッチアップが追いつかない、といったこともあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>今ではすっかり市民権を得た『クラウド』について、そもそもどういったものなのか、メリットとデメリットを紹介しました。安価で小さく始められるクラウドを活用することは、ヒト・モノ・カネに制限の多い中小企業に大きなメリットがあります。</p>
+
+</section>
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.linkup.works%2fblog%2fwhat-is-cloud-merits-and-demerits%2f&text=%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e3%82%92%e6%b4%bb%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%83%87%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Tweet"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.linkup.works%2fblog%2fwhat-is-cloud-merits-and-demerits%2f&title=%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e3%82%92%e6%b4%bb%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%83%87%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.linkup.works%2fblog%2fwhat-is-cloud-merits-and-demerits%2f&t=%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e3%82%92%e6%b4%bb%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%83%87%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.linkup.works%2fblog%2fwhat-is-cloud-merits-and-demerits%2f&title=%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e3%82%92%e6%b4%bb%e7%94%a8%e3%81%99%e3%82%8b%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%83%87%e3%83%a1%e3%83%aa%e3%83%83%e3%83%88%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="pocket"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89/">クラウド</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span class="article-time--modified">
+            最終更新 2021年 7月 28日
+        </span>
+    </section></footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">関連するコンテンツ</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/blog/support-expiration-date-of-windows10/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/support-expiration-date-of-windows10/update.fcc5d288aaed4e266707001140275ec4_huf3d53408ca983c4b3451a542ffd4839c_33160_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-/MXSiKrtTiZnBwARQCdexA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 10 のサポート期限をご確認ください</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/what-is-windows-update/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/what-is-windows-update/_hu3df50a9ad388e96a305aa0188f275e3c_10208_7fce6de1bf0c73f24047882a66c3e671.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-pKFb9AQ3Lvt9GDt7rDxz9w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WindowsUpdateとアップデートしないリスク</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 合同会社 Linkup
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.4.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <h2 class="widget-title section-title">目次</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#クラウドとは">クラウドとは？</a></li>
+    <li><a href="#クラウドのメリット">クラウドのメリット</a>
+      <ol>
+        <li><a href="#初期費用が安価になった">初期費用が安価になった</a></li>
+        <li><a href="#すぐに使えるすぐに止められる">すぐに使える、すぐに止められる</a></li>
+        <li><a href="#高度なセキュリティ基準に準拠している">高度なセキュリティ基準に準拠している</a></li>
+      </ol>
+    </li>
+    <li><a href="#クラウドのデメリット">クラウドのデメリット</a>
+      <ol>
+        <li><a href="#基本的にセルフサービス">基本的にセルフサービス</a></li>
+        <li><a href="#使いこなすにはそれなりにスキルが必要">使いこなすにはそれなりにスキルが必要</a></li>
+      </ol>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

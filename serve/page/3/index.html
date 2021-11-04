@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head>
+	<meta name="generator" content="Hugo 0.88.1" /><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='主にインフラ(サーバー、ミドルウェア)をメインに、SaaS 導入、Ruby(Rails)、Python(Django)を少々。広く浅くやってきました。'><title>合同会社 Linkup</title>
+
+<link rel='canonical' href='https://www.linkup.works/'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="/css/sharebutton.css">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='合同会社 Linkup'>
+<meta property='og:description' content='主にインフラ(サーバー、ミドルウェア)をメインに、SaaS 導入、Ruby(Rails)、Python(Django)を少々。広く浅くやってきました。'>
+<meta property='og:url' content='https://www.linkup.works/'>
+<meta property='og:site_name' content='合同会社 Linkup'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2021-08-03T12:13:48&#43;09:00 '/>
+<meta name="twitter:site" content="@toyocy">
+    <meta name="twitter:creator" content="@toyocy"><meta name="twitter:title" content="合同会社 Linkup">
+<meta name="twitter:description" content="主にインフラ(サーバー、ミドルウェア)をメインに、SaaS 導入、Ruby(Rails)、Python(Django)を少々。広く浅くやってきました。"><link rel="alternate" type="application/rss&#43;xml" href="https://www.linkup.works/index.xml">
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-TQPFW79");</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQPFW79" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "light");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huf8d855b7a8bc9b2c7da412845bcd7483_11852_300x0_resize_q75_h2_box_2.webp" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://www.linkup.works">合同会社 Linkup</a></h1>
+        <h2 class="site-description">主にインフラ(サーバー、ミドルウェア)をメインに、SaaS 導入、Ruby(Rails)、Python(Django)を少々。広く浅くやってきました。</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/search'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/blog'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+  <line x1="13" y1="8" x2="15" y2="8" />
+  <line x1="13" y1="12" x2="15" y2="12" />
+</svg>
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archive</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/privacy-policy'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+  <circle cx="12" cy="11" r="1" />
+  <line x1="12" y1="12" x2="12" y2="14.5" />
+</svg>
+                
+                <span>プライバシーポリシー</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/specified-commercial-transactions'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+  <circle cx="12" cy="11" r="1" />
+  <line x1="12" y1="12" x2="12" y2="14.5" />
+</svg>
+                
+                <span>特定商取引法に基づく表示</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+<main class="main full-width">
+    
+    
+    
+    
+
+    <section class="article-list">
+        
+            
+<article class="has-image">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/cloud-services-of-nice-to-have-and-their-feature/">
+                <img src="/blog/cloud-services-of-nice-to-have-and-their-feature/beautiful-landscape-stockpack-unsplash_hud7282dd39fb6e16c2aa67144dadbe74e_68900_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/cloud-services-of-nice-to-have-and-their-feature/beautiful-landscape-stockpack-unsplash_hud7282dd39fb6e16c2aa67144dadbe74e_68900_800x0_resize_q75_h2_box_2.webp 800w, /blog/cloud-services-of-nice-to-have-and-their-feature/beautiful-landscape-stockpack-unsplash_hud7282dd39fb6e16c2aa67144dadbe74e_68900_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="438" 
+                        loading="lazy"
+                        alt="Featured image of post 使うと便利なクラウドのサービスとその特徴" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/cloud-services-of-nice-to-have-and-their-feature/">使うと便利なクラウドのサービスとその特徴</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 3月 9日</time>
+    </footer></div>
+</header>
+</article>
+        
+            
+<article class="has-image">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/step-by-step-online-meeting-part1/">
+                <img src="/blog/step-by-step-online-meeting-part1/online-meeting_hu0390674960ac443991142b3a29260d89_40916_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/step-by-step-online-meeting-part1/online-meeting_hu0390674960ac443991142b3a29260d89_40916_800x0_resize_q75_h2_box_2.webp 800w, /blog/step-by-step-online-meeting-part1/online-meeting_hu0390674960ac443991142b3a29260d89_40916_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="438" 
+                        loading="lazy"
+                        alt="Featured image of post オンライン会議のはじめの一歩 | 必要なもの" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+            <a href="/categories/howto/" >
+                HowTo
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/step-by-step-online-meeting-part1/">オンライン会議のはじめの一歩 | 必要なもの</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 2月 24日</time>
+    </footer></div>
+</header>
+</article>
+        
+            
+<article class="has-image">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/lets-use-google-drive/">
+                <img src="/blog/lets-use-google-drive/pexels-photo-4483608_hu441851b56e0e9ee6580b08b2fb91e0a7_95852_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/lets-use-google-drive/pexels-photo-4483608_hu441851b56e0e9ee6580b08b2fb91e0a7_95852_800x0_resize_q75_h2_box_2.webp 800w, /blog/lets-use-google-drive/pexels-photo-4483608_hu441851b56e0e9ee6580b08b2fb91e0a7_95852_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="581" 
+                        loading="lazy"
+                        alt="Featured image of post クラウドストレージの Google ドライブを活用しよう！" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+            <a href="/categories/howto/" >
+                HowTo
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/lets-use-google-drive/">クラウドストレージの Google ドライブを活用しよう！</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 2月 22日</time>
+    </footer></div>
+</header>
+</article>
+        
+            
+<article class="has-image">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/what-is-cloud-merits-and-demerits/">
+                <img src="/blog/what-is-cloud-merits-and-demerits/cloud_huda4ecc70cc162080333ee59be023e39e_22810_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/what-is-cloud-merits-and-demerits/cloud_huda4ecc70cc162080333ee59be023e39e_22810_800x0_resize_q75_h2_box_2.webp 800w, /blog/what-is-cloud-merits-and-demerits/cloud_huda4ecc70cc162080333ee59be023e39e_22810_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="517" 
+                        loading="lazy"
+                        alt="Featured image of post クラウドを活用するメリットとデメリット" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" >
+                セキュリティ
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/what-is-cloud-merits-and-demerits/">クラウドを活用するメリットとデメリット</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 2月 8日</time>
+    </footer></div>
+</header>
+</article>
+        
+            
+<article class="has-image">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/3-ways-for-sb-to-get-return-on-it-investment/">
+                <img src="/blog/3-ways-for-sb-to-get-return-on-it-investment/pexels-photo-4947386_hu528b21ac942386933591d9e8cd8ba82e_60020_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/3-ways-for-sb-to-get-return-on-it-investment/pexels-photo-4947386_hu528b21ac942386933591d9e8cd8ba82e_60020_800x0_resize_q75_h2_box_2.webp 800w, /blog/3-ways-for-sb-to-get-return-on-it-investment/pexels-photo-4947386_hu528b21ac942386933591d9e8cd8ba82e_60020_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="438" 
+                        loading="lazy"
+                        alt="Featured image of post 小規模企業でも IT の投資対効果を出す3つの方法" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+            <a href="/categories/howto/" >
+                HowTo
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/3-ways-for-sb-to-get-return-on-it-investment/">小規模企業でも IT の投資対効果を出す3つの方法</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 2月 5日</time>
+    </footer></div>
+</header>
+</article>
+        
+    </section>
+    <nav class='pagination'>
+        
+        
+
+        
+            
+                    <a class='page-link' href='/'>1</a>
+                
+            
+            
+                    <a class='page-link' href='/page/2/'>2</a>
+                
+            
+            
+                <span class='page-link current'>3</span>
+                
+            
+            
+                    <a class='page-link' href='/page/4/'>4</a>
+                
+            
+    </nav>
+
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 合同会社 Linkup
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.4.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+            </main>
+    
+    
+    <aside class="sidebar right-sidebar sticky">
+        
+            <form action="/search/" class="search-form widget" >
+        <p>
+            <label>検索</label>
+            <input name="keyword" required placeholder="入力..." />
+        
+            <button title="検索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+        
+            <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">アーカイブ</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2021">
+                        
+                            <span class="year">2021</span>
+                            <span class="count">16</span>
+                        
+                    </a> 
+                </div>
+            <div class="archives-year">
+                    <a href="/archives/#2020">
+                        
+                            <span class="year">2020</span>
+                            <span class="count">4</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+        
+            <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">タグ</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/excel/" class="font_size_4">
+                Excel
+            </a>
+        
+            <a href="/tags/google-workspace/" class="font_size_4">
+                Google Workspace
+            </a>
+        
+            <a href="/tags/saas/" class="font_size_4">
+                SaaS
+            </a>
+        
+            <a href="/tags/%E4%BA%8B%E5%8B%99%E4%BD%9C%E6%A5%AD/" class="font_size_4">
+                事務作業
+            </a>
+        
+            <a href="/tags/google-drive/" class="font_size_3">
+                Google Drive
+            </a>
+        
+            <a href="/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89/" class="font_size_3">
+                クラウド
+            </a>
+        
+            <a href="/tags/windows-10/" class="font_size_2">
+                Windows 10
+            </a>
+        
+            <a href="/tags/windows-update/" class="font_size_2">
+                Windows Update
+            </a>
+        
+            <a href="/tags/%E3%83%86%E3%83%AC%E3%83%AF%E3%83%BC%E3%82%AF/" class="font_size_2">
+                テレワーク
+            </a>
+        
+            <a href="/tags/%E5%8A%B9%E7%8E%87%E5%8C%96/" class="font_size_2">
+                効率化
+            </a>
+        
+    </div>
+</section>
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

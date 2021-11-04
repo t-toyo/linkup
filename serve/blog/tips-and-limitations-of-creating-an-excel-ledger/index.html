@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Excel で売上台帳や資産管理台帳などの様々な台帳を作成している企業は多いです。Excel は利用者も多く、実務でも使えるテンプレートや書籍、HowTo の情報なども豊富で、社内の資産や売上などを管理する際に使うソフトウェアとして一番最初に思い浮かびます。
+台帳管理する際、管理運用しやすい構造を意識して台帳を作成することは非常に重要です。台帳の作りの良し悪しで業務効率に大きな差が出ます。本記事では管理台帳を作る際に、抑えておきたいポイントについてお伝えします。また、Excel での台帳管理の限界についても触れたいと思います。
+管理台帳の作成ポイント ここではよく使われるであろう備品管理台帳を例にして解説したいと思います。どんな備品か、いつ購入したか、どこに設置されているかなどを管理する台帳を想定します。解説するポイントについては備品管理台帳に限った話ではなく、どのような台帳でもポイントになるものです。
+一意な ID を設ける その備品を特定できる一意な ID の欄を設けることをおすすめします。ID を読めばその備品が何かがわかるような命名規則にしても良いですし、ただの数字の羅列でも構いませんが、大原則として ID は重複しないように設定します。パソコンやスマホなどを管理する台帳であればシリアルナンバーでも良いと思います。 ID を設ける理由としては、管理台帳だけでなく他の台帳でも利用したり、機器に貼り付けるシールなどに ID を記載して、ID を元に情報を辿れるようにします。
+入力内容がある程度決まっているものは入力規則を使う 例えば、記入した担当者名や、備品の分類でノートPC、スマホ、プリンタ、プロジェクタなどのように、ある程度入力する内容が決まっている項目は入力規則でリストを使いましょう。予め決められた項目から選んで入力させることで、入力間違いを減らすことができます。
+  動画の中では、選択できる項目を入力規則の中で直接指定していましたが、リストを使う項目が多い場合はリストの項目まとめたシートを作ることもおすすめです。  入力規則のリスト 
+また、入力規則を設定して、購入日の欄に日付以外を入力できないようにしたり、金額のように集計可能な数値が入るべきところに、全角の数字が入らないようにするなど、意図しない値が設定されないようにすることも重要です。  入力規則の設定   エラー検出 
+セル結合しない セルを結合すると並び替えがうまく機能しなくなったり、フィルタ処理などを行った際に意図しない動作になります。例えばこういったデータです。  セル結合の例 
+こうした台帳だった場合、セルが結合されていることによって備品の台数を確認することが非常に手間になりますし、範囲選択がうまく働きません。下の図のように結合を解除することはできますが、空欄になったセルに正しい情報を入れることも手間になります。  セル結合の解除 
+セルの結合はせず、1セルに1データとなるように台帳を作ることをおすすめします。  セル結合しない表 
+集計、分析は別シートで行う カテゴリ別の機器台数や、品名ごとの台数、場所ごとの設置機器など、台帳を元に集計したり分析したりする場合は、管理台帳のシートの中で集計はせずに別シートにしましょう。台帳の中に小計の行などが含まれていると、フィルタや並び替えを行うときに意図しない動作になる場合があります。様々な分類で集計するにはピボットテーブルを使うのが便利です。関数を使って集計するよりも手軽に集計できます。  ピボットテーブル 
+ピボットテーブルの作成方法についてはこちらもご確認ください。
+ピボットテーブルを作成してワークシート データを分析する
+Excel 台帳の限界 Excel 自体は大量のデータを格納することができ、1シートあたり最大行が 1,048,576 行、最大列が 16,384 列となっています。この行列をすべて使うことは非現実的ですが、台帳管理を普通に運用していても『そろそろExcelはきついな』と思うときが必ずやってきます。
+具体的な指標は特にないのですが、私の経験から、どのような状態になったときに Excel 台帳の限界と言えるかご紹介したいと思います。Excel 台帳を卒業し、何らかの業務システムにすることを検討するための判断材料にしていただけたらと思います。'><title>Excel での管理台帳作成のコツとその限界</title>
+
+<link rel='canonical' href='https://www.linkup.works/blog/tips-and-limitations-of-creating-an-excel-ledger/'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="/css/sharebutton.css">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Excel での管理台帳作成のコツとその限界'>
+<meta property='og:description' content='Excel で売上台帳や資産管理台帳などの様々な台帳を作成している企業は多いです。Excel は利用者も多く、実務でも使えるテンプレートや書籍、HowTo の情報なども豊富で、社内の資産や売上などを管理する際に使うソフトウェアとして一番最初に思い浮かびます。
+台帳管理する際、管理運用しやすい構造を意識して台帳を作成することは非常に重要です。台帳の作りの良し悪しで業務効率に大きな差が出ます。本記事では管理台帳を作る際に、抑えておきたいポイントについてお伝えします。また、Excel での台帳管理の限界についても触れたいと思います。
+管理台帳の作成ポイント ここではよく使われるであろう備品管理台帳を例にして解説したいと思います。どんな備品か、いつ購入したか、どこに設置されているかなどを管理する台帳を想定します。解説するポイントについては備品管理台帳に限った話ではなく、どのような台帳でもポイントになるものです。
+一意な ID を設ける その備品を特定できる一意な ID の欄を設けることをおすすめします。ID を読めばその備品が何かがわかるような命名規則にしても良いですし、ただの数字の羅列でも構いませんが、大原則として ID は重複しないように設定します。パソコンやスマホなどを管理する台帳であればシリアルナンバーでも良いと思います。 ID を設ける理由としては、管理台帳だけでなく他の台帳でも利用したり、機器に貼り付けるシールなどに ID を記載して、ID を元に情報を辿れるようにします。
+入力内容がある程度決まっているものは入力規則を使う 例えば、記入した担当者名や、備品の分類でノートPC、スマホ、プリンタ、プロジェクタなどのように、ある程度入力する内容が決まっている項目は入力規則でリストを使いましょう。予め決められた項目から選んで入力させることで、入力間違いを減らすことができます。
+  動画の中では、選択できる項目を入力規則の中で直接指定していましたが、リストを使う項目が多い場合はリストの項目まとめたシートを作ることもおすすめです。  入力規則のリスト 
+また、入力規則を設定して、購入日の欄に日付以外を入力できないようにしたり、金額のように集計可能な数値が入るべきところに、全角の数字が入らないようにするなど、意図しない値が設定されないようにすることも重要です。  入力規則の設定   エラー検出 
+セル結合しない セルを結合すると並び替えがうまく機能しなくなったり、フィルタ処理などを行った際に意図しない動作になります。例えばこういったデータです。  セル結合の例 
+こうした台帳だった場合、セルが結合されていることによって備品の台数を確認することが非常に手間になりますし、範囲選択がうまく働きません。下の図のように結合を解除することはできますが、空欄になったセルに正しい情報を入れることも手間になります。  セル結合の解除 
+セルの結合はせず、1セルに1データとなるように台帳を作ることをおすすめします。  セル結合しない表 
+集計、分析は別シートで行う カテゴリ別の機器台数や、品名ごとの台数、場所ごとの設置機器など、台帳を元に集計したり分析したりする場合は、管理台帳のシートの中で集計はせずに別シートにしましょう。台帳の中に小計の行などが含まれていると、フィルタや並び替えを行うときに意図しない動作になる場合があります。様々な分類で集計するにはピボットテーブルを使うのが便利です。関数を使って集計するよりも手軽に集計できます。  ピボットテーブル 
+ピボットテーブルの作成方法についてはこちらもご確認ください。
+ピボットテーブルを作成してワークシート データを分析する
+Excel 台帳の限界 Excel 自体は大量のデータを格納することができ、1シートあたり最大行が 1,048,576 行、最大列が 16,384 列となっています。この行列をすべて使うことは非現実的ですが、台帳管理を普通に運用していても『そろそろExcelはきついな』と思うときが必ずやってきます。
+具体的な指標は特にないのですが、私の経験から、どのような状態になったときに Excel 台帳の限界と言えるかご紹介したいと思います。Excel 台帳を卒業し、何らかの業務システムにすることを検討するための判断材料にしていただけたらと思います。'>
+<meta property='og:url' content='https://www.linkup.works/blog/tips-and-limitations-of-creating-an-excel-ledger/'>
+<meta property='og:site_name' content='合同会社 Linkup'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:tag' content='事務作業' /><meta property='article:tag' content='Excel' /><meta property='article:published_time' content='2021-05-21T22:08:00&#43;09:00'/><meta property='article:modified_time' content='2021-07-28T17:05:54&#43;09:00'/><meta property='og:image' content='https://www.linkup.works/blog/tips-and-limitations-of-creating-an-excel-ledger/white-graphing-paper-stockpack-pexels.webp' />
+<meta name="twitter:site" content="@toyocy">
+    <meta name="twitter:creator" content="@toyocy"><meta name="twitter:title" content="Excel での管理台帳作成のコツとその限界">
+<meta name="twitter:description" content="Excel で売上台帳や資産管理台帳などの様々な台帳を作成している企業は多いです。Excel は利用者も多く、実務でも使えるテンプレートや書籍、HowTo の情報なども豊富で、社内の資産や売上などを管理する際に使うソフトウェアとして一番最初に思い浮かびます。
+台帳管理する際、管理運用しやすい構造を意識して台帳を作成することは非常に重要です。台帳の作りの良し悪しで業務効率に大きな差が出ます。本記事では管理台帳を作る際に、抑えておきたいポイントについてお伝えします。また、Excel での台帳管理の限界についても触れたいと思います。
+管理台帳の作成ポイント ここではよく使われるであろう備品管理台帳を例にして解説したいと思います。どんな備品か、いつ購入したか、どこに設置されているかなどを管理する台帳を想定します。解説するポイントについては備品管理台帳に限った話ではなく、どのような台帳でもポイントになるものです。
+一意な ID を設ける その備品を特定できる一意な ID の欄を設けることをおすすめします。ID を読めばその備品が何かがわかるような命名規則にしても良いですし、ただの数字の羅列でも構いませんが、大原則として ID は重複しないように設定します。パソコンやスマホなどを管理する台帳であればシリアルナンバーでも良いと思います。 ID を設ける理由としては、管理台帳だけでなく他の台帳でも利用したり、機器に貼り付けるシールなどに ID を記載して、ID を元に情報を辿れるようにします。
+入力内容がある程度決まっているものは入力規則を使う 例えば、記入した担当者名や、備品の分類でノートPC、スマホ、プリンタ、プロジェクタなどのように、ある程度入力する内容が決まっている項目は入力規則でリストを使いましょう。予め決められた項目から選んで入力させることで、入力間違いを減らすことができます。
+  動画の中では、選択できる項目を入力規則の中で直接指定していましたが、リストを使う項目が多い場合はリストの項目まとめたシートを作ることもおすすめです。  入力規則のリスト 
+また、入力規則を設定して、購入日の欄に日付以外を入力できないようにしたり、金額のように集計可能な数値が入るべきところに、全角の数字が入らないようにするなど、意図しない値が設定されないようにすることも重要です。  入力規則の設定   エラー検出 
+セル結合しない セルを結合すると並び替えがうまく機能しなくなったり、フィルタ処理などを行った際に意図しない動作になります。例えばこういったデータです。  セル結合の例 
+こうした台帳だった場合、セルが結合されていることによって備品の台数を確認することが非常に手間になりますし、範囲選択がうまく働きません。下の図のように結合を解除することはできますが、空欄になったセルに正しい情報を入れることも手間になります。  セル結合の解除 
+セルの結合はせず、1セルに1データとなるように台帳を作ることをおすすめします。  セル結合しない表 
+集計、分析は別シートで行う カテゴリ別の機器台数や、品名ごとの台数、場所ごとの設置機器など、台帳を元に集計したり分析したりする場合は、管理台帳のシートの中で集計はせずに別シートにしましょう。台帳の中に小計の行などが含まれていると、フィルタや並び替えを行うときに意図しない動作になる場合があります。様々な分類で集計するにはピボットテーブルを使うのが便利です。関数を使って集計するよりも手軽に集計できます。  ピボットテーブル 
+ピボットテーブルの作成方法についてはこちらもご確認ください。
+ピボットテーブルを作成してワークシート データを分析する
+Excel 台帳の限界 Excel 自体は大量のデータを格納することができ、1シートあたり最大行が 1,048,576 行、最大列が 16,384 列となっています。この行列をすべて使うことは非現実的ですが、台帳管理を普通に運用していても『そろそろExcelはきついな』と思うときが必ずやってきます。
+具体的な指標は特にないのですが、私の経験から、どのような状態になったときに Excel 台帳の限界と言えるかご紹介したいと思います。Excel 台帳を卒業し、何らかの業務システムにすることを検討するための判断材料にしていただけたらと思います。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://www.linkup.works/blog/tips-and-limitations-of-creating-an-excel-ledger/white-graphing-paper-stockpack-pexels.webp' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-TQPFW79");</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQPFW79" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "light");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.linkup.works" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>戻る</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/">
+                <img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/white-graphing-paper-stockpack-pexels_hu9f8e920ddd3652413b71c7721c2a3d9b_71102_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/white-graphing-paper-stockpack-pexels_hu9f8e920ddd3652413b71c7721c2a3d9b_71102_800x0_resize_q75_h2_box_2.webp 800w, /blog/tips-and-limitations-of-creating-an-excel-ledger/white-graphing-paper-stockpack-pexels_hu9f8e920ddd3652413b71c7721c2a3d9b_71102_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="438" 
+                        loading="lazy"
+                        alt="Featured image of post Excel での管理台帳作成のコツとその限界" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+            <a href="/categories/howto/" >
+                HowTo
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/">Excel での管理台帳作成のコツとその限界</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 5月 21日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>Excel で売上台帳や資産管理台帳などの様々な台帳を作成している企業は多いです。Excel は利用者も多く、実務でも使えるテンプレートや書籍、HowTo の情報なども豊富で、社内の資産や売上などを管理する際に使うソフトウェアとして一番最初に思い浮かびます。</p>
+<p>台帳管理する際、管理運用しやすい構造を意識して台帳を作成することは非常に重要です。台帳の作りの良し悪しで業務効率に大きな差が出ます。本記事では管理台帳を作る際に、抑えておきたいポイントについてお伝えします。また、Excel での台帳管理の限界についても触れたいと思います。</p>
+<h2 id="管理台帳の作成ポイント">管理台帳の作成ポイント</h2>
+<p>ここではよく使われるであろう備品管理台帳を例にして解説したいと思います。どんな備品か、いつ購入したか、どこに設置されているかなどを管理する台帳を想定します。解説するポイントについては備品管理台帳に限った話ではなく、どのような台帳でもポイントになるものです。</p>
+<h3 id="一意な-id-を設ける">一意な ID を設ける</h3>
+<p>その備品を特定できる一意な ID の欄を設けることをおすすめします。ID を読めばその備品が何かがわかるような命名規則にしても良いですし、ただの数字の羅列でも構いませんが、大原則として ID は<strong>重複しないように</strong>設定します。パソコンやスマホなどを管理する台帳であればシリアルナンバーでも良いと思います。
+ID を設ける理由としては、管理台帳だけでなく他の台帳でも利用したり、機器に貼り付けるシールなどに ID を記載して、ID を元に情報を辿れるようにします。</p>
+<h3 id="入力内容がある程度決まっているものは入力規則を使う">入力内容がある程度決まっているものは入力規則を使う</h3>
+<p>例えば、記入した担当者名や、備品の分類でノートPC、スマホ、プリンタ、プロジェクタなどのように、ある程度入力する内容が決まっている項目は入力規則で<strong>リスト</strong>を使いましょう。予め決められた項目から選んで入力させることで、入力間違いを減らすことができます。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/Bf-0B9rC0Lw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>動画の中では、選択できる項目を入力規則の中で直接指定していましたが、リストを使う項目が多い場合はリストの項目まとめたシートを作ることもおすすめです。
+<figure style="flex-grow: 106; flex-basis: 256px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88.webp" data-size="1558x1460"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88_hu6845e160f014389c31cccc67bc7525cf_30528_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88_hu6845e160f014389c31cccc67bc7525cf_30528_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1558"
+				height="1460"
+				loading="lazy"
+				alt="入力規則のリスト">
+		</a>
+		
+		<figcaption>入力規則のリスト</figcaption>
+		
+	</figure></p>
+<p>また、入力規則を設定して、購入日の欄に日付以外を入力できないようにしたり、金額のように集計可能な数値が入るべきところに、全角の数字が入らないようにするなど、<strong>意図しない値が設定されないようにする</strong>ことも重要です。
+<figure style="flex-grow: 140; flex-basis: 338px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E8%A8%AD%E5%AE%9A.webp" data-size="768x545"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E8%A8%AD%E5%AE%9A.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E8%A8%AD%E5%AE%9A_hu4a97ae87386dec1659cd5a2fc45265fe_12092_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%85%A5%E5%8A%9B%E8%A6%8F%E5%89%87%E8%A8%AD%E5%AE%9A_hu4a97ae87386dec1659cd5a2fc45265fe_12092_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="768"
+				height="545"
+				loading="lazy"
+				alt="入力規則の設定">
+		</a>
+		
+		<figcaption>入力規則の設定</figcaption>
+		
+	</figure> <figure style="flex-grow: 89; flex-basis: 214px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%A8%E3%83%A9%E3%83%BC%E6%A4%9C%E5%87%BA.webp" data-size="542x606"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%A8%E3%83%A9%E3%83%BC%E6%A4%9C%E5%87%BA.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%A8%E3%83%A9%E3%83%BC%E6%A4%9C%E5%87%BA_hu6e6f2eba24c3ccbb9910858a13cbad0a_9818_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%A8%E3%83%A9%E3%83%BC%E6%A4%9C%E5%87%BA_hu6e6f2eba24c3ccbb9910858a13cbad0a_9818_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="542"
+				height="606"
+				loading="lazy"
+				alt="エラー検出">
+		</a>
+		
+		<figcaption>エラー検出</figcaption>
+		
+	</figure></p>
+<h3 id="セル結合しない">セル結合しない</h3>
+<p>セルを結合すると並び替えがうまく機能しなくなったり、フィルタ処理などを行った際に意図しない動作になります。例えばこういったデータです。
+<figure style="flex-grow: 139; flex-basis: 335px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3Before.webp" data-size="1058x756"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3Before.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3Before_hueb2674b6c960896072181778a7aa6629_26408_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3Before_hueb2674b6c960896072181778a7aa6629_26408_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1058"
+				height="756"
+				loading="lazy"
+				alt="セル結合の例">
+		</a>
+		
+		<figcaption>セル結合の例</figcaption>
+		
+	</figure></p>
+<p>こうした台帳だった場合、セルが結合されていることによって備品の台数を確認することが非常に手間になりますし、範囲選択がうまく働きません。下の図のように結合を解除することはできますが、空欄になったセルに正しい情報を入れることも手間になります。
+<figure style="flex-grow: 148; flex-basis: 356px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%BB%E3%83%AB%E7%B5%90%E5%90%88%E8%A7%A3%E9%99%A4.webp" data-size="972x654"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%BB%E3%83%AB%E7%B5%90%E5%90%88%E8%A7%A3%E9%99%A4.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%BB%E3%83%AB%E7%B5%90%E5%90%88%E8%A7%A3%E9%99%A4_hu336e9747daf9a5975510e843789a1ebe_24570_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%82%BB%E3%83%AB%E7%B5%90%E5%90%88%E8%A7%A3%E9%99%A4_hu336e9747daf9a5975510e843789a1ebe_24570_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="972"
+				height="654"
+				loading="lazy"
+				alt="セル結合の解除">
+		</a>
+		
+		<figcaption>セル結合の解除</figcaption>
+		
+	</figure></p>
+<p>セルの結合はせず、1セルに1データとなるように台帳を作ることをおすすめします。
+<figure style="flex-grow: 154; flex-basis: 371px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3After.webp" data-size="922x596"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3After.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3After_hu79b323b9bb1addf7181dbb5e1564b367_28548_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E5%8F%B0%E5%B8%B3After_hu79b323b9bb1addf7181dbb5e1564b367_28548_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="922"
+				height="596"
+				loading="lazy"
+				alt="セル結合しない表">
+		</a>
+		
+		<figcaption>セル結合しない表</figcaption>
+		
+	</figure></p>
+<h3 id="集計分析は別シートで行う">集計、分析は別シートで行う</h3>
+<p>カテゴリ別の機器台数や、品名ごとの台数、場所ごとの設置機器など、台帳を元に集計したり分析したりする場合は、管理台帳のシートの中で集計はせずに別シートにしましょう。台帳の中に小計の行などが含まれていると、フィルタや並び替えを行うときに意図しない動作になる場合があります。様々な分類で集計するにはピボットテーブルを使うのが便利です。関数を使って集計するよりも手軽に集計できます。
+<figure style="flex-grow: 253; flex-basis: 609px">
+		<a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%83%94%E3%83%9C%E3%83%83%E3%83%88%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB.webp" data-size="1462x576"><img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%83%94%E3%83%9C%E3%83%83%E3%83%88%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB.webp"
+				srcset="/blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%83%94%E3%83%9C%E3%83%83%E3%83%88%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB_hu3baa7441d10a44dd0a583247069b3e4e_23634_480x0_resize_q75_h2_box_2.webp 480w, /blog/tips-and-limitations-of-creating-an-excel-ledger/%E3%83%94%E3%83%9C%E3%83%83%E3%83%88%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB_hu3baa7441d10a44dd0a583247069b3e4e_23634_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1462"
+				height="576"
+				loading="lazy"
+				alt="ピボットテーブル">
+		</a>
+		
+		<figcaption>ピボットテーブル</figcaption>
+		
+	</figure></p>
+<p>ピボットテーブルの作成方法についてはこちらもご確認ください。</p>
+<p><a class="link" href="https://support.microsoft.com/ja-jp/office/%E3%83%94%E3%83%9C%E3%83%83%E3%83%88%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%88%86%E6%9E%90%E3%81%99%E3%82%8B-a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Windows"  target="_blank" rel="noopener"
+    >ピボットテーブルを作成してワークシート データを分析する</a></p>
+<h2 id="excel-台帳の限界">Excel 台帳の限界</h2>
+<p>Excel 自体は大量のデータを格納することができ、1シートあたり最大行が 1,048,576 行、最大列が 16,384 列となっています。この行列をすべて使うことは非現実的ですが、台帳管理を普通に運用していても『そろそろExcelはきついな』と思うときが必ずやってきます。</p>
+<p>具体的な指標は特にないのですが、私の経験から、どのような状態になったときに Excel 台帳の限界と言えるかご紹介したいと思います。Excel 台帳を卒業し、何らかの業務システムにすることを検討するための判断材料にしていただけたらと思います。</p>
+<h3 id="1-ファイルサイズが1mbを超えるようになった時">1. ファイルサイズが1MBを超えるようになった時</h3>
+<p>データが多くなればなるほどファイルサイズは大きくなります。
+通常の Excel ファイルには、Excel 2007 まで使われていた .xls という拡張子と、Excel 2007 以降に標準となった .xlsx の2つがあります。.xlsx の特徴の一つとして .xls のファイルと比較すると、<strong>ファイルサイズが大きくなりにくい</strong>、という特徴があります。
+そのため、.xlsx のファイルで1MBを超えるのはファイルとしては比較的大きい部類になります。ファイルサイズが大きくなってくると次のような弊害が出てきます。</p>
+<ol>
+<li>ファイルを開くのが遅くなる</li>
+<li>ファイルが破損しやすくなる</li>
+<li>集計やフィルタが遅くなる</li>
+</ol>
+<p>ファイルが開くのを待つことや、破損したファイルを元の状態に復元することは、なんの生産性にも繋がりません。容量に関わらず、大量のデータを扱っていたり、ファイルが破損することが増えてきたと感じたら、業務システムにすることをおすすめします。</p>
+<h3 id="2-入力間違いや入力漏れなどデータとしての誤りが出てきた時">2. 入力間違いや入力漏れなどデータとしての誤りが出てきた時</h3>
+<p>入力間違いや入力漏れなど、データとしての誤りが出てくるというのは台帳管理する上では最も致命的です。</p>
+<p>1つでもデータの誤りが見つかると、他にも誤りが含まれる可能性が出てきます。
+誤ったデータが紛れ込んでいれば、台帳としての正確性、信頼性が疑わしくなってきます。正しくない情報が含まれる可能性がある台帳を使って運用を行った場合、作業の手戻りや最終的な仕事の成果にも影響が出てきます。</p>
+<h3 id="3-他のシステムと連携する必要が出た時">3. 他のシステムと連携する必要が出た時</h3>
+<p>その台帳で管理しているデータを他のシステムにも取り込みたい、という場合があります。例えば店舗ごとの売上管理台帳があったとして、集計した金額を会計ソフトに取り込みたい。といった具合です。</p>
+<p>力技になりますが、会計ソフトに取り込むためのCSVファイルにエクスポートするようなマクロを組むこともできますが、マクロのメンテナンスなどでも負担がかかってきますし、ファイルの破損なども引き起こしやすくなります。
+kintone などで業務システムを作るといった方法が取れれば、標準機能として CSV 出力ができますし、kintone と API 連携が可能な会計ソフトなどもあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>Excel は非常に便利ですし、簡単な集計、管理を行うには最適なソフトです。</p>
+<p>いい台帳を作るためのちょっとしたコツを掴むことができれば、業務の大幅な効率化が見込めることは間違いありません。
+適切に管理できていないがためにかえって手間が増えたり、品質が低下することがあっては本末転倒と言えますので、どこまで Excel で運用していくか、卒業のタイミングを見誤らないようにしたいものです。</p>
+
+</section>
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.linkup.works%2fblog%2ftips-and-limitations-of-creating-an-excel-ledger%2f&text=Excel%20%e3%81%a7%e3%81%ae%e7%ae%a1%e7%90%86%e5%8f%b0%e5%b8%b3%e4%bd%9c%e6%88%90%e3%81%ae%e3%82%b3%e3%83%84%e3%81%a8%e3%81%9d%e3%81%ae%e9%99%90%e7%95%8c%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Tweet"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.linkup.works%2fblog%2ftips-and-limitations-of-creating-an-excel-ledger%2f&title=Excel%20%e3%81%a7%e3%81%ae%e7%ae%a1%e7%90%86%e5%8f%b0%e5%b8%b3%e4%bd%9c%e6%88%90%e3%81%ae%e3%82%b3%e3%83%84%e3%81%a8%e3%81%9d%e3%81%ae%e9%99%90%e7%95%8c%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.linkup.works%2fblog%2ftips-and-limitations-of-creating-an-excel-ledger%2f&t=Excel%20%e3%81%a7%e3%81%ae%e7%ae%a1%e7%90%86%e5%8f%b0%e5%b8%b3%e4%bd%9c%e6%88%90%e3%81%ae%e3%82%b3%e3%83%84%e3%81%a8%e3%81%9d%e3%81%ae%e9%99%90%e7%95%8c%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.linkup.works%2fblog%2ftips-and-limitations-of-creating-an-excel-ledger%2f&title=Excel%20%e3%81%a7%e3%81%ae%e7%ae%a1%e7%90%86%e5%8f%b0%e5%b8%b3%e4%bd%9c%e6%88%90%e3%81%ae%e3%82%b3%e3%83%84%e3%81%a8%e3%81%9d%e3%81%ae%e9%99%90%e7%95%8c%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="pocket"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E4%BA%8B%E5%8B%99%E4%BD%9C%E6%A5%AD/">事務作業</a>
+        
+            <a href="/tags/excel/">Excel</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span class="article-time--modified">
+            最終更新 2021年 7月 28日
+        </span>
+    </section></footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">関連するコンテンツ</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/blog/lets-systemize-excel-ledger-with-kintone/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/lets-systemize-excel-ledger-with-kintone/title.1e4ca51e4f50dabedf72254e8b3bb573_hu5eaa81537ac256d29cda59d033413619_27046_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-HkylHk9Q2r7fciVOizu1cw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">kintone で Excel 台帳をシステム化しよう</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/2important-tips-for-creating-a-ledger-in-excel/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/2important-tips-for-creating-a-ledger-in-excel/title.79b4b3126fdc5cd5512b1a1b7d8e646a_huba63cd0bce6a31323a154d235e3a8464_14690_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-ebSzEm/cXNVRKxobfY5kag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Excel で台帳を作るときの2つの重要なコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/_hua97b4ceb40d43b5408ce6c6146a0cf02_91496_bd26e668d0b969f0544ca372725976f6.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-kYuWwl/zFT75bv7MCH6X4g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">事務作業を効率化すべき3つの理由と6つのコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/stop-using-excel-applications/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/stop-using-excel-applications/_hu4482852ab71bed475190b7f34b15e9fc_19636_25855d2678000a7f1a991746237c3ca9.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-XWprwn0c&#43;jKeIWdNgtUCnA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">そろそろやめませんか Excel 申請書</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/disadvantages-of-attribution-and-how-to-resolve/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/disadvantages-of-attribution-and-how-to-resolve/_hubdd1b4681019a3b367ec4a16609af947_49350_460c365d2fafde8fd7f0b625fd516c6a.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-VJx0m8oJkbzY6w/RAve&#43;9Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">業務の属人化のデメリットと解消方法</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 合同会社 Linkup
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.4.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <h2 class="widget-title section-title">目次</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#管理台帳の作成ポイント">管理台帳の作成ポイント</a>
+      <ol>
+        <li><a href="#一意な-id-を設ける">一意な ID を設ける</a></li>
+        <li><a href="#入力内容がある程度決まっているものは入力規則を使う">入力内容がある程度決まっているものは入力規則を使う</a></li>
+        <li><a href="#セル結合しない">セル結合しない</a></li>
+        <li><a href="#集計分析は別シートで行う">集計、分析は別シートで行う</a></li>
+      </ol>
+    </li>
+    <li><a href="#excel-台帳の限界">Excel 台帳の限界</a>
+      <ol>
+        <li><a href="#1-ファイルサイズが1mbを超えるようになった時">1. ファイルサイズが1MBを超えるようになった時</a></li>
+        <li><a href="#2-入力間違いや入力漏れなどデータとしての誤りが出てきた時">2. 入力間違いや入力漏れなどデータとしての誤りが出てきた時</a></li>
+        <li><a href="#3-他のシステムと連携する必要が出た時">3. 他のシステムと連携する必要が出た時</a></li>
+      </ol>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

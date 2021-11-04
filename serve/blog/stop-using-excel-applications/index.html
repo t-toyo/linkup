@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='確かな裏付けをとったわけではないのですが、この世で最も使われているアプリケーションは Microsoft の Excel だと思っています。そして、日本人ほど表計算ソフトの Excel で多様な使い方をしている人々はいないと言われています。
+その証拠に「Excel 申請書」で検索してみると、膨大な数のテンプレートがヒットします。
+ Excel申請書 
+ちなみに、海外ではどうかというと、Excel の申請書はあまりメジャーではないようです。下の画像はアメリカのアイオワ州政府のホームページに掲載されている各種申請書の一覧です。 File Format を見るとほぼ全てが編集可能な PDF ファイルか、Word のファイルになっています。
+ Excel申請書 
+申請書の中身はこんな感じです。PDF ファイルなのですが各項目に入力できるようになっており、Yes/No のチェックも入れられるようになっています。申請書を入力したらメールかFAXまたは郵送で申請するそうです。このへんは日本とあまり変わらないですね。
+ 申請書の例 
+この記事でお伝えしたいのは、タイトルにもあるように Excel で申請書を作るのはそろそろやめませんか？ ということです。Excel で申請書を作るも記入するのも結構ストレスが溜まりますし使い勝手もよくありません。Word で申請書を作ることをおすすめしますが、こんなときはどうしたらいいの？というところまで解説したいと思います。
+Excel 申請書のデメリット 印刷プレビュー通りに印刷されない 申請書を作成することに限らないのですが、Excel の印刷プレビューで表示されたとおりには印刷されることは少ないように思います。
+誰しも一度は経験したことがあると思いますが、改ページプレビューでも印刷プレビューでも枠内にしっかりと文字が収まっているはずなのに、印刷してみると見切れてしまっている。ということはないでしょうか？
+「Excelは印刷するまで信じるな」　新社会人がやりがちな“Excel失敗あるある”に「何度騙されたことか」と反響
+申請書に入力して印刷するということを考えると、文字の長さやセルの幅が変更される可能性があるため、きちんと印刷されない可能性が高まります。 実際に印刷してみないと、きちんと枠内に収まっているかどうかわからないので、修正→印刷→確認→更に修正といったように申請書を作成するときも、実際に記入するときも非常に手間がかかります。
+項目の数を変更しづらい Excel を方眼紙のように使った申請書で、いわゆる神Excelと呼ばれる申請書に起きがちです。緻密に作成された書式で、項目を追加したり、減らしたりすると用紙サイズにきちんと収まるように調整しなければならない場合があります。これを調整するのは時間もかかりますし、上述した印刷プレビュー通りに印刷されない問題と相まって、何度も印刷して見た目を調整しなければなりません。
+2ページめ以降が見落とされやすい 複数ページに渡って記入が必要な申請書の場合、シート1 に1ページめ、シート2に2ページめというような作りになっていることがあります。こうした作りになっていると、シート1だけ記入し、シート2以降が見落とされやすくなり、記入漏れ、申請不備といったことが起こります。
+申請書は Word で作ろう 私が強くおすすめするのは、Word を使って申請書を作ることです。Excel がインストールされたパソコンなら Microsoft Office がインストールされていると思いますので、Word も使えるはずです。Word は文書作成ソフトなので、申請書作成にはうってつけです。Excel で起きがちな印刷プレビューと印刷物がずれるということもありませんし、2ページめ以降を見落とすということもありません。
+Word で申請書を作成するに際して、こんなときはどうするの？といったご質問について回答したいと思います。
+Excel のように表で集計したい。 使い勝手は Excel ほどよくはありませんが、Word の表でも集計は可能です。こちらのリンクにあるように、表に計算式を埋め込んで集計ができます。'><title>そろそろやめませんか Excel 申請書</title>
+
+<link rel='canonical' href='https://www.linkup.works/blog/stop-using-excel-applications/'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="/css/sharebutton.css">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='そろそろやめませんか Excel 申請書'>
+<meta property='og:description' content='確かな裏付けをとったわけではないのですが、この世で最も使われているアプリケーションは Microsoft の Excel だと思っています。そして、日本人ほど表計算ソフトの Excel で多様な使い方をしている人々はいないと言われています。
+その証拠に「Excel 申請書」で検索してみると、膨大な数のテンプレートがヒットします。
+ Excel申請書 
+ちなみに、海外ではどうかというと、Excel の申請書はあまりメジャーではないようです。下の画像はアメリカのアイオワ州政府のホームページに掲載されている各種申請書の一覧です。 File Format を見るとほぼ全てが編集可能な PDF ファイルか、Word のファイルになっています。
+ Excel申請書 
+申請書の中身はこんな感じです。PDF ファイルなのですが各項目に入力できるようになっており、Yes/No のチェックも入れられるようになっています。申請書を入力したらメールかFAXまたは郵送で申請するそうです。このへんは日本とあまり変わらないですね。
+ 申請書の例 
+この記事でお伝えしたいのは、タイトルにもあるように Excel で申請書を作るのはそろそろやめませんか？ ということです。Excel で申請書を作るも記入するのも結構ストレスが溜まりますし使い勝手もよくありません。Word で申請書を作ることをおすすめしますが、こんなときはどうしたらいいの？というところまで解説したいと思います。
+Excel 申請書のデメリット 印刷プレビュー通りに印刷されない 申請書を作成することに限らないのですが、Excel の印刷プレビューで表示されたとおりには印刷されることは少ないように思います。
+誰しも一度は経験したことがあると思いますが、改ページプレビューでも印刷プレビューでも枠内にしっかりと文字が収まっているはずなのに、印刷してみると見切れてしまっている。ということはないでしょうか？
+「Excelは印刷するまで信じるな」　新社会人がやりがちな“Excel失敗あるある”に「何度騙されたことか」と反響
+申請書に入力して印刷するということを考えると、文字の長さやセルの幅が変更される可能性があるため、きちんと印刷されない可能性が高まります。 実際に印刷してみないと、きちんと枠内に収まっているかどうかわからないので、修正→印刷→確認→更に修正といったように申請書を作成するときも、実際に記入するときも非常に手間がかかります。
+項目の数を変更しづらい Excel を方眼紙のように使った申請書で、いわゆる神Excelと呼ばれる申請書に起きがちです。緻密に作成された書式で、項目を追加したり、減らしたりすると用紙サイズにきちんと収まるように調整しなければならない場合があります。これを調整するのは時間もかかりますし、上述した印刷プレビュー通りに印刷されない問題と相まって、何度も印刷して見た目を調整しなければなりません。
+2ページめ以降が見落とされやすい 複数ページに渡って記入が必要な申請書の場合、シート1 に1ページめ、シート2に2ページめというような作りになっていることがあります。こうした作りになっていると、シート1だけ記入し、シート2以降が見落とされやすくなり、記入漏れ、申請不備といったことが起こります。
+申請書は Word で作ろう 私が強くおすすめするのは、Word を使って申請書を作ることです。Excel がインストールされたパソコンなら Microsoft Office がインストールされていると思いますので、Word も使えるはずです。Word は文書作成ソフトなので、申請書作成にはうってつけです。Excel で起きがちな印刷プレビューと印刷物がずれるということもありませんし、2ページめ以降を見落とすということもありません。
+Word で申請書を作成するに際して、こんなときはどうするの？といったご質問について回答したいと思います。
+Excel のように表で集計したい。 使い勝手は Excel ほどよくはありませんが、Word の表でも集計は可能です。こちらのリンクにあるように、表に計算式を埋め込んで集計ができます。'>
+<meta property='og:url' content='https://www.linkup.works/blog/stop-using-excel-applications/'>
+<meta property='og:site_name' content='合同会社 Linkup'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:tag' content='事務作業' /><meta property='article:tag' content='Excel' /><meta property='article:tag' content='Word' /><meta property='article:tag' content='申請書' /><meta property='article:published_time' content='2021-04-26T17:47:00&#43;09:00'/><meta property='article:modified_time' content='2021-07-28T17:05:54&#43;09:00'/><meta property='og:image' content='https://www.linkup.works/blog/stop-using-excel-applications/pexels-skylar-kang-6207369-scaled.webp' />
+<meta name="twitter:site" content="@toyocy">
+    <meta name="twitter:creator" content="@toyocy"><meta name="twitter:title" content="そろそろやめませんか Excel 申請書">
+<meta name="twitter:description" content="確かな裏付けをとったわけではないのですが、この世で最も使われているアプリケーションは Microsoft の Excel だと思っています。そして、日本人ほど表計算ソフトの Excel で多様な使い方をしている人々はいないと言われています。
+その証拠に「Excel 申請書」で検索してみると、膨大な数のテンプレートがヒットします。
+ Excel申請書 
+ちなみに、海外ではどうかというと、Excel の申請書はあまりメジャーではないようです。下の画像はアメリカのアイオワ州政府のホームページに掲載されている各種申請書の一覧です。 File Format を見るとほぼ全てが編集可能な PDF ファイルか、Word のファイルになっています。
+ Excel申請書 
+申請書の中身はこんな感じです。PDF ファイルなのですが各項目に入力できるようになっており、Yes/No のチェックも入れられるようになっています。申請書を入力したらメールかFAXまたは郵送で申請するそうです。このへんは日本とあまり変わらないですね。
+ 申請書の例 
+この記事でお伝えしたいのは、タイトルにもあるように Excel で申請書を作るのはそろそろやめませんか？ ということです。Excel で申請書を作るも記入するのも結構ストレスが溜まりますし使い勝手もよくありません。Word で申請書を作ることをおすすめしますが、こんなときはどうしたらいいの？というところまで解説したいと思います。
+Excel 申請書のデメリット 印刷プレビュー通りに印刷されない 申請書を作成することに限らないのですが、Excel の印刷プレビューで表示されたとおりには印刷されることは少ないように思います。
+誰しも一度は経験したことがあると思いますが、改ページプレビューでも印刷プレビューでも枠内にしっかりと文字が収まっているはずなのに、印刷してみると見切れてしまっている。ということはないでしょうか？
+「Excelは印刷するまで信じるな」　新社会人がやりがちな“Excel失敗あるある”に「何度騙されたことか」と反響
+申請書に入力して印刷するということを考えると、文字の長さやセルの幅が変更される可能性があるため、きちんと印刷されない可能性が高まります。 実際に印刷してみないと、きちんと枠内に収まっているかどうかわからないので、修正→印刷→確認→更に修正といったように申請書を作成するときも、実際に記入するときも非常に手間がかかります。
+項目の数を変更しづらい Excel を方眼紙のように使った申請書で、いわゆる神Excelと呼ばれる申請書に起きがちです。緻密に作成された書式で、項目を追加したり、減らしたりすると用紙サイズにきちんと収まるように調整しなければならない場合があります。これを調整するのは時間もかかりますし、上述した印刷プレビュー通りに印刷されない問題と相まって、何度も印刷して見た目を調整しなければなりません。
+2ページめ以降が見落とされやすい 複数ページに渡って記入が必要な申請書の場合、シート1 に1ページめ、シート2に2ページめというような作りになっていることがあります。こうした作りになっていると、シート1だけ記入し、シート2以降が見落とされやすくなり、記入漏れ、申請不備といったことが起こります。
+申請書は Word で作ろう 私が強くおすすめするのは、Word を使って申請書を作ることです。Excel がインストールされたパソコンなら Microsoft Office がインストールされていると思いますので、Word も使えるはずです。Word は文書作成ソフトなので、申請書作成にはうってつけです。Excel で起きがちな印刷プレビューと印刷物がずれるということもありませんし、2ページめ以降を見落とすということもありません。
+Word で申請書を作成するに際して、こんなときはどうするの？といったご質問について回答したいと思います。
+Excel のように表で集計したい。 使い勝手は Excel ほどよくはありませんが、Word の表でも集計は可能です。こちらのリンクにあるように、表に計算式を埋め込んで集計ができます。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://www.linkup.works/blog/stop-using-excel-applications/pexels-skylar-kang-6207369-scaled.webp' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-TQPFW79");</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQPFW79" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "light");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.linkup.works" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>戻る</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/stop-using-excel-applications/">
+                <img src="/blog/stop-using-excel-applications/pexels-skylar-kang-6207369-scaled_hu4482852ab71bed475190b7f34b15e9fc_19636_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/stop-using-excel-applications/pexels-skylar-kang-6207369-scaled_hu4482852ab71bed475190b7f34b15e9fc_19636_800x0_resize_q75_h2_box_2.webp 800w, /blog/stop-using-excel-applications/pexels-skylar-kang-6207369-scaled_hu4482852ab71bed475190b7f34b15e9fc_19636_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="438" 
+                        loading="lazy"
+                        alt="Featured image of post そろそろやめませんか Excel 申請書" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/stop-using-excel-applications/">そろそろやめませんか Excel 申請書</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 4月 26日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>確かな裏付けをとったわけではないのですが、この世で最も使われているアプリケーションは Microsoft の Excel だと思っています。そして、日本人ほど表計算ソフトの Excel で多様な使い方をしている人々はいないと言われています。</p>
+<p>その証拠に「Excel 申請書」で検索してみると、膨大な数のテンプレートがヒットします。</p>
+<p><figure style="flex-grow: 188; flex-basis: 452px">
+		<a href="/blog/stop-using-excel-applications/Excel%E7%94%B3%E8%AB%8B%E6%9B%B8.webp" data-size="2000x1060"><img src="/blog/stop-using-excel-applications/Excel%E7%94%B3%E8%AB%8B%E6%9B%B8.webp"
+				srcset="/blog/stop-using-excel-applications/Excel%E7%94%B3%E8%AB%8B%E6%9B%B8_hu42fa24fee1b6244b4d8909f5e50e55b1_106610_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/Excel%E7%94%B3%E8%AB%8B%E6%9B%B8_hu42fa24fee1b6244b4d8909f5e50e55b1_106610_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="1060"
+				loading="lazy"
+				alt="Excel申請書">
+		</a>
+		
+		<figcaption>Excel申請書</figcaption>
+		
+	</figure></p>
+<p>ちなみに、海外ではどうかというと、Excel の申請書はあまりメジャーではないようです。下の画像はアメリカのアイオワ州政府のホームページに掲載されている各種申請書の一覧です。 File Format を見るとほぼ全てが編集可能な PDF ファイルか、Word のファイルになっています。</p>
+<p><figure style="flex-grow: 188; flex-basis: 452px">
+		<a href="/blog/stop-using-excel-applications/%E3%82%A2%E3%82%A4%E3%82%AA%E3%83%AF%E5%B7%9E%E6%94%BF%E5%BA%9C%E5%90%84%E7%A8%AE%E7%94%B3%E8%AB%8B%E6%9B%B8.webp" data-size="2000x1061"><img src="/blog/stop-using-excel-applications/%E3%82%A2%E3%82%A4%E3%82%AA%E3%83%AF%E5%B7%9E%E6%94%BF%E5%BA%9C%E5%90%84%E7%A8%AE%E7%94%B3%E8%AB%8B%E6%9B%B8.webp"
+				srcset="/blog/stop-using-excel-applications/%E3%82%A2%E3%82%A4%E3%82%AA%E3%83%AF%E5%B7%9E%E6%94%BF%E5%BA%9C%E5%90%84%E7%A8%AE%E7%94%B3%E8%AB%8B%E6%9B%B8_hu5489514b38e22151ac1e2d36095d2f88_76342_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E3%82%A2%E3%82%A4%E3%82%AA%E3%83%AF%E5%B7%9E%E6%94%BF%E5%BA%9C%E5%90%84%E7%A8%AE%E7%94%B3%E8%AB%8B%E6%9B%B8_hu5489514b38e22151ac1e2d36095d2f88_76342_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="1061"
+				loading="lazy"
+				alt="Excel申請書">
+		</a>
+		
+		<figcaption>Excel申請書</figcaption>
+		
+	</figure></p>
+<p>申請書の中身はこんな感じです。PDF ファイルなのですが各項目に入力できるようになっており、Yes/No のチェックも入れられるようになっています。申請書を入力したらメールかFAXまたは郵送で申請するそうです。このへんは日本とあまり変わらないですね。</p>
+<p><figure style="flex-grow: 160; flex-basis: 385px">
+		<a href="/blog/stop-using-excel-applications/%E7%94%B3%E8%AB%8B%E6%9B%B8%E3%81%AE%E4%BE%8B.webp" data-size="2000x1244"><img src="/blog/stop-using-excel-applications/%E7%94%B3%E8%AB%8B%E6%9B%B8%E3%81%AE%E4%BE%8B.webp"
+				srcset="/blog/stop-using-excel-applications/%E7%94%B3%E8%AB%8B%E6%9B%B8%E3%81%AE%E4%BE%8B_huef80b842a35bf8aa864de7ed78871759_134096_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E7%94%B3%E8%AB%8B%E6%9B%B8%E3%81%AE%E4%BE%8B_huef80b842a35bf8aa864de7ed78871759_134096_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2000"
+				height="1244"
+				loading="lazy"
+				alt="申請書の例">
+		</a>
+		
+		<figcaption>申請書の例</figcaption>
+		
+	</figure></p>
+<p>この記事でお伝えしたいのは、タイトルにもあるように <strong>Excel で申請書を作るのはそろそろやめませんか？</strong> ということです。Excel で申請書を作るも記入するのも結構ストレスが溜まりますし使い勝手もよくありません。Word で申請書を作ることをおすすめしますが、こんなときはどうしたらいいの？というところまで解説したいと思います。</p>
+<h2 id="excel-申請書のデメリット">Excel 申請書のデメリット</h2>
+<h3 id="印刷プレビュー通りに印刷されない">印刷プレビュー通りに印刷されない</h3>
+<p>申請書を作成することに限らないのですが、Excel の印刷プレビューで表示されたとおりには印刷されることは少ないように思います。</p>
+<p>誰しも一度は経験したことがあると思いますが、改ページプレビューでも印刷プレビューでも枠内にしっかりと文字が収まっているはずなのに、印刷してみると見切れてしまっている。ということはないでしょうか？</p>
+<p><a class="link" href="https://news.yahoo.co.jp/articles/2f0351a5507ff5e4bd210e26b8375c23fc61ea2a"  target="_blank" rel="noopener"
+    >「Excelは印刷するまで信じるな」　新社会人がやりがちな“Excel失敗あるある”に「何度騙されたことか」と反響</a></p>
+<p>申請書に入力して印刷するということを考えると、文字の長さやセルの幅が変更される可能性があるため、きちんと印刷されない可能性が高まります。
+実際に印刷してみないと、きちんと枠内に収まっているかどうかわからないので、修正→印刷→確認→更に修正といったように申請書を作成するときも、実際に記入するときも非常に手間がかかります。</p>
+<h3 id="項目の数を変更しづらい">項目の数を変更しづらい</h3>
+<p>Excel を方眼紙のように使った申請書で、いわゆる<strong>神Excel</strong>と呼ばれる申請書に起きがちです。緻密に作成された書式で、項目を追加したり、減らしたりすると用紙サイズにきちんと収まるように調整しなければならない場合があります。これを調整するのは時間もかかりますし、上述した印刷プレビュー通りに印刷されない問題と相まって、何度も印刷して見た目を調整しなければなりません。</p>
+<h3 id="2ページめ以降が見落とされやすい">2ページめ以降が見落とされやすい</h3>
+<p>複数ページに渡って記入が必要な申請書の場合、シート1 に1ページめ、シート2に2ページめというような作りになっていることがあります。こうした作りになっていると、シート1だけ記入し、シート2以降が見落とされやすくなり、記入漏れ、申請不備といったことが起こります。</p>
+<h2 id="申請書は-word-で作ろう">申請書は Word で作ろう</h2>
+<p>私が強くおすすめするのは、Word を使って申請書を作ることです。Excel がインストールされたパソコンなら Microsoft Office がインストールされていると思いますので、Word も使えるはずです。Word は文書作成ソフトなので、申請書作成にはうってつけです。Excel で起きがちな印刷プレビューと印刷物がずれるということもありませんし、2ページめ以降を見落とすということもありません。</p>
+<p>Word で申請書を作成するに際して、こんなときはどうするの？といったご質問について回答したいと思います。</p>
+<h3 id="excel-のように表で集計したい">Excel のように表で集計したい。</h3>
+<p>使い勝手は Excel ほどよくはありませんが、Word の表でも集計は可能です。こちらのリンクにあるように、表に計算式を埋め込んで集計ができます。</p>
+<p><a class="link" href="https://support.microsoft.com/ja-jp/office/%E8%A1%A8%E5%86%85%E3%81%AE%E5%88%97%E3%81%BE%E3%81%9F%E3%81%AF%E8%A1%8C%E3%81%AE%E6%95%B0%E5%80%A4%E3%82%92%E5%90%88%E8%A8%88%E3%81%99%E3%82%8B-110097a9-76c9-449d-a092-82df0ff548d0"  target="_blank" rel="noopener"
+    >Microsoft サポート | 表内の列または行の数値を合計する</a></p>
+<p>計算式を埋め込みたいセルを選択し、レイアウトタブにある「計算式」をクリックします。
+<figure style="flex-grow: 534; flex-basis: 1283px">
+		<a href="/blog/stop-using-excel-applications/word%E8%A8%88%E7%AE%97%E5%BC%8F.webp" data-size="1380x258"><img src="/blog/stop-using-excel-applications/word%E8%A8%88%E7%AE%97%E5%BC%8F.webp"
+				srcset="/blog/stop-using-excel-applications/word%E8%A8%88%E7%AE%97%E5%BC%8F_hu4bb96646c4a21ab4164e282c65c63204_21458_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/word%E8%A8%88%E7%AE%97%E5%BC%8F_hu4bb96646c4a21ab4164e282c65c63204_21458_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1380"
+				height="258"
+				loading="lazy"
+				alt="計算式">
+		</a>
+		
+		<figcaption>計算式</figcaption>
+		
+	</figure></p>
+<p>計算式を入力します。画像はみかんの単価と売上個数を掛け算する計算式です。
+<figure style="flex-grow: 147; flex-basis: 354px">
+		<a href="/blog/stop-using-excel-applications/%E8%A8%88%E7%AE%97%E5%BC%8F%E3%81%AE%E4%BE%8B.webp" data-size="1366x926"><img src="/blog/stop-using-excel-applications/%E8%A8%88%E7%AE%97%E5%BC%8F%E3%81%AE%E4%BE%8B.webp"
+				srcset="/blog/stop-using-excel-applications/%E8%A8%88%E7%AE%97%E5%BC%8F%E3%81%AE%E4%BE%8B_hu2cb4ed64caa7d76d605475f1f4501608_21644_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E8%A8%88%E7%AE%97%E5%BC%8F%E3%81%AE%E4%BE%8B_hu2cb4ed64caa7d76d605475f1f4501608_21644_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1366"
+				height="926"
+				loading="lazy"
+				alt="計算式の例">
+		</a>
+		
+		<figcaption>計算式の例</figcaption>
+		
+	</figure></p>
+<p><strong>注意: 値を更新しても自動で再計算されません</strong></p>
+<blockquote>
+<p>Word の表による計算で注意が必要なのは、Excel のように値を変更しても計算式が自動で再計算されないことです。再計算するには画像のように、表の左上の十字矢印をクリックしてセルを全選択し「F9」で再計算します。</p>
+</blockquote>
+<p><figure style="flex-grow: 286; flex-basis: 688px">
+		<a href="/blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97.webp" data-size="1102x384"><img src="/blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97.webp"
+				srcset="/blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97_hua584a19d23dea17d88ada46409459378_11476_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97_hua584a19d23dea17d88ada46409459378_11476_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1102"
+				height="384"
+				loading="lazy"
+				alt="再計算前">
+		</a>
+		
+		<figcaption>再計算前</figcaption>
+		
+	</figure> <figure style="flex-grow: 282; flex-basis: 678px">
+		<a href="/blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97%E5%BE%8C.webp" data-size="1092x386"><img src="/blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97%E5%BE%8C.webp"
+				srcset="/blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97%E5%BE%8C_hu87ab9cc12100c107d3af5e44e4550059_12242_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E5%86%8D%E8%A8%88%E7%AE%97%E5%BE%8C_hu87ab9cc12100c107d3af5e44e4550059_12242_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1092"
+				height="386"
+				loading="lazy"
+				alt="再計算後">
+		</a>
+		
+		<figcaption>再計算後</figcaption>
+		
+	</figure></p>
+<p>申請者に表を埋めて申請して貰う場合には不便になりますが、表計算が必要な箇所を別添資料として Excel 形式で用意し、文章での記入が必要な部分を Word にするといったように、適材適所でツールを選択することも重要です。</p>
+<h3 id="文章の開始位置を微妙な位置にしたい">文章の開始位置を微妙な位置にしたい</h3>
+<p>Word で文章の開始位置を調整する際に、スペースやタブなどを使って調整すると文言を修正したりすると、簡単に体裁がずれるので、ルーラーやインデント、文字揃えを使いましょう。</p>
+<p>例えば、こちらの動画では上の段の年月日は<strong>右揃え</strong>で体裁を整えたもので、下の段は<strong>スペース</strong>で体裁を整えました。ちょっと見ただけでは同じような体裁に見えますが、実際に年月日を入力すると、どちらが入力しやすいか、体裁が整っているかは一目瞭然です。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/l6j8yvozXLQ" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>右揃えにすると文字の終端を揃える体裁になりますが、文字の先頭を揃えつつ一番右に寄せたいという場合にはルーラーを使うと簡単に体裁を整えることができます。ルーラーが表示されていない場合は、「表示」タブで「ルーラー」にチェックを入れます。</p>
+<p><figure style="flex-grow: 524; flex-basis: 1259px">
+		<a href="/blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC.webp" data-size="1606x306"><img src="/blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC.webp"
+				srcset="/blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC_huc9c73773b748026e541ae508f6c6073f_12578_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC_huc9c73773b748026e541ae508f6c6073f_12578_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1606"
+				height="306"
+				loading="lazy"
+				alt="ルーラー">
+		</a>
+		
+		<figcaption>ルーラー</figcaption>
+		
+	</figure> <figure style="flex-grow: 257; flex-basis: 617px">
+		<a href="/blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%A1%A8%E7%A4%BA.webp" data-size="654x254"><img src="/blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%A1%A8%E7%A4%BA.webp"
+				srcset="/blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%A1%A8%E7%A4%BA_hu33cc66c8934e966bf9ed30bcf9a421de_10280_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E3%83%AB%E3%83%BC%E3%83%A9%E3%83%BC%E3%81%AE%E8%A1%A8%E7%A4%BA_hu33cc66c8934e966bf9ed30bcf9a421de_10280_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="654"
+				height="254"
+				loading="lazy"
+				alt="ルーラーの表示">
+		</a>
+		
+		<figcaption>ルーラーの表示</figcaption>
+		
+	</figure></p>
+<p>例えば、「所属」と「氏名」を同じ位置から始まるように揃えたい場合に、右揃えにするとそれぞれの文字列の終端が揃ってしまいます。</p>
+<p><figure style="flex-grow: 216; flex-basis: 518px">
+		<a href="/blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88before.webp" data-size="1366x632"><img src="/blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88before.webp"
+				srcset="/blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88before_hu0fac09c4979b946badc095c3dc48d020_12262_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88before_hu0fac09c4979b946badc095c3dc48d020_12262_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1366"
+				height="632"
+				loading="lazy"
+				alt="これを">
+		</a>
+		
+		<figcaption>これを</figcaption>
+		
+	</figure> <figure style="flex-grow: 218; flex-basis: 523px">
+		<a href="/blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88after.webp" data-size="1550x710"><img src="/blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88after.webp"
+				srcset="/blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88after_hua439a6570e7e8e5ddc57804a318c24eb_12838_480x0_resize_q75_h2_box_2.webp 480w, /blog/stop-using-excel-applications/%E6%96%87%E5%AD%97%E6%8F%83%E3%81%88after_hua439a6570e7e8e5ddc57804a318c24eb_12838_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1550"
+				height="710"
+				loading="lazy"
+				alt="こうしたい">
+		</a>
+		
+		<figcaption>こうしたい</figcaption>
+		
+	</figure></p>
+<p>こちらの動画のように、所属と氏名を選択し、文字列の開始位置をルーラーで調整することで体裁を整えることができます。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/iLDAOBYd7wM" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<h2 id="まとめ">まとめ</h2>
+<p>Excel が悪いと言うことを言いたいわけではありませんし、各種申請業務を行う上ではWordがベストか？というと決してそうではありません。</p>
+<p>今では様々な電子申請のツールや入力フォームの作成ツールがあるので、そちらを使うことがベストなこともあります。
+あくまで適材適所でツールを見極め、使いこなすこと、そして既存の業務に疑問を持つことが効率化の第一歩だと考えています。</p>
+
+</section>
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.linkup.works%2fblog%2fstop-using-excel-applications%2f&text=%e3%81%9d%e3%82%8d%e3%81%9d%e3%82%8d%e3%82%84%e3%82%81%e3%81%be%e3%81%9b%e3%82%93%e3%81%8b%20Excel%20%e7%94%b3%e8%ab%8b%e6%9b%b8%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Tweet"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.linkup.works%2fblog%2fstop-using-excel-applications%2f&title=%e3%81%9d%e3%82%8d%e3%81%9d%e3%82%8d%e3%82%84%e3%82%81%e3%81%be%e3%81%9b%e3%82%93%e3%81%8b%20Excel%20%e7%94%b3%e8%ab%8b%e6%9b%b8%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.linkup.works%2fblog%2fstop-using-excel-applications%2f&t=%e3%81%9d%e3%82%8d%e3%81%9d%e3%82%8d%e3%82%84%e3%82%81%e3%81%be%e3%81%9b%e3%82%93%e3%81%8b%20Excel%20%e7%94%b3%e8%ab%8b%e6%9b%b8%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.linkup.works%2fblog%2fstop-using-excel-applications%2f&title=%e3%81%9d%e3%82%8d%e3%81%9d%e3%82%8d%e3%82%84%e3%82%81%e3%81%be%e3%81%9b%e3%82%93%e3%81%8b%20Excel%20%e7%94%b3%e8%ab%8b%e6%9b%b8%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="pocket"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E4%BA%8B%E5%8B%99%E4%BD%9C%E6%A5%AD/">事務作業</a>
+        
+            <a href="/tags/excel/">Excel</a>
+        
+            <a href="/tags/word/">Word</a>
+        
+            <a href="/tags/%E7%94%B3%E8%AB%8B%E6%9B%B8/">申請書</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span class="article-time--modified">
+            最終更新 2021年 7月 28日
+        </span>
+    </section></footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">関連するコンテンツ</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/_hu9f8e920ddd3652413b71c7721c2a3d9b_71102_8610181c132d9c729c96c8eaf25674ed.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-3nlcSm9RIPiDIdxONrPR1Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Excel での管理台帳作成のコツとその限界</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/lets-systemize-excel-ledger-with-kintone/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/lets-systemize-excel-ledger-with-kintone/title.1e4ca51e4f50dabedf72254e8b3bb573_hu5eaa81537ac256d29cda59d033413619_27046_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-HkylHk9Q2r7fciVOizu1cw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">kintone で Excel 台帳をシステム化しよう</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/2important-tips-for-creating-a-ledger-in-excel/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/2important-tips-for-creating-a-ledger-in-excel/title.79b4b3126fdc5cd5512b1a1b7d8e646a_huba63cd0bce6a31323a154d235e3a8464_14690_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-ebSzEm/cXNVRKxobfY5kag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Excel で台帳を作るときの2つの重要なコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/_hua97b4ceb40d43b5408ce6c6146a0cf02_91496_bd26e668d0b969f0544ca372725976f6.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-kYuWwl/zFT75bv7MCH6X4g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">事務作業を効率化すべき3つの理由と6つのコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/how-to-operation-improvement/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/how-to-operation-improvement/pexels-photo-3183197.60fc9a330966fd0111aec3c60b2c3919_hudb69bb9d2aa8c57161afc6bdef96d2f0_58068_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-YPyaMwlm/QERrsPGCyw5GQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">業務の効率化と成果に結びつく進め方</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 合同会社 Linkup
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.4.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <h2 class="widget-title section-title">目次</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#excel-申請書のデメリット">Excel 申請書のデメリット</a>
+      <ol>
+        <li><a href="#印刷プレビュー通りに印刷されない">印刷プレビュー通りに印刷されない</a></li>
+        <li><a href="#項目の数を変更しづらい">項目の数を変更しづらい</a></li>
+        <li><a href="#2ページめ以降が見落とされやすい">2ページめ以降が見落とされやすい</a></li>
+      </ol>
+    </li>
+    <li><a href="#申請書は-word-で作ろう">申請書は Word で作ろう</a>
+      <ol>
+        <li><a href="#excel-のように表で集計したい">Excel のように表で集計したい。</a></li>
+        <li><a href="#文章の開始位置を微妙な位置にしたい">文章の開始位置を微妙な位置にしたい</a></li>
+      </ol>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

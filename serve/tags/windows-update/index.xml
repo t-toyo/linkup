@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Update on 合同会社 Linkup</title>
+    <link>https://www.linkup.works/tags/windows-update/</link>
+    <description>Recent content in Windows Update on 合同会社 Linkup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 19 Jan 2021 11:43:00 +0900</lastBuildDate><atom:link href="https://www.linkup.works/tags/windows-update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 10 のサポート期限をご確認ください</title>
+      <link>https://www.linkup.works/blog/support-expiration-date-of-windows10/</link>
+      <pubDate>Tue, 19 Jan 2021 11:43:00 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/blog/support-expiration-date-of-windows10/</guid>
+      <description>日頃の業務で使っているパソコンには Windows 10 が入っていることが多いと思います。この Windows 10 ですが適切にアップデートはされていますか？
+Windows 10 にはサポート期限があり、サポート期限を過ぎた Windows 10 はセキュリティの更新プログラムや追加機能などが配信されず、脆弱性が修正されなかったり、様々なサービスでサポート対象外の OS とされる場合があります。定期的にアップデートしなければ最新バージョンにはならないため、知らない間にサポート期限が切れていた。ということも起こりかねません。
+Windows 10 のサポート期限 サポート期限はこちらからご確認ください。2021/6/6 現在では以下のバージョンがサポートされています。
+   Version 開始日 終了日     Version 20H2 2020/10/20 2022/05/10   Version 2004 2020/05/27 2021/12/14    リリースされたバージョンは基本的には1年半ほどしかサポートされないのでご注意ください。
+バージョンの確認方法 Windows 10 のバージョンは以下の手順で確認できます。
+  [Windows キー + R]を押し、「ファイル名を指定して実行」で[winver]と入力して[OK]をクリックします。  Windowsキー + R 
+  [Windows のバージョン情報]が表示されます。[バージョン]に表示されているバージョンを確認します。この画像の場合 20H2 がバージョンです。上記の表ではサポートの終了日が 2022/05/10 であることがわかります。  バージョン</description>
+    </item>
+    
+    <item>
+      <title>WindowsUpdateとアップデートしないリスク</title>
+      <link>https://www.linkup.works/blog/what-is-windows-update/</link>
+      <pubDate>Thu, 19 Nov 2020 10:22:00 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/blog/what-is-windows-update/</guid>
+      <description>普段から Windows 10 を使っている方は多いと思います。日常的な業務で Excel や Word などのアプリを使ったり、Microsoft Edge や Google Chrome などでインターネットを閲覧している方は多いでしょう。
+インターネットの利用は今では当たり前になりましたが、その分様々なセキュリティリスクをはらんでいることも事実です。ウイルス対策ソフトをインストールしていることはセキュリティの基本ですが、Windows 10 や Excel、Word などの Office ソフトのアップデートについてはどうでしょうか。
+使っている PC が適切にアップデートされているかどうか、アップデートをする方法、アップデートしなかったらどうなるのかなどについて、今回は書いていきたいと思います。
+Windows 10 のアップデートとは？ Windows 10 が Microsoft 社が開発している OS であることはよく知られています。そして、世に存在する全てのソフトウェアに言えることですが、不具合や脆弱性(ぜいじゃくせい)のないソフトウェアというのは存在しません。不具合がないように見えても表立っていないだけで、不具合は内在しているのです。
+不具合や脆弱性が存在するのは、Windows も同様です。Windows 10 は 2015 年にリリースされ、すでに5年以上が経っています。
+世界中で数十億人の利用者がいる世界で最も利用者の多いソフトウェアの一つですので、その分不具合や、脆弱性が報告されることも多いソフトウェアです。あらゆるソフトウェアの不具合や脆弱性が登録されている、脆弱性対策情報データベースでは、2021年7月1日現在で報告されている Windows 10 に関する脆弱性の報告は2425件にもなります。年換算で約485件、月平均で40件前後は報告されている計算になります。
+ 脆弱性情報 
+Windows 10 を利用することが危険、ということを言いたいわけではありません。日々、開発元である Microsoft がこうした脆弱性に対応するために、OS の修正を行っており、月に一度インターネット経由で Windows Update として更新プログラムを配信しています。
+配信された更新プログラムを PC にインストールし、Windows をアップデートすることで、こうした脆弱性が修正され、Windows 10 をより安全に使うことができます。
+Windows 10 のアップデート方法 Windows を最新の状態にするためのアップデートは数クリックで完了します。
+ Windows ボタンをクリックして[設定]をクリックします。  設定  [設定]画面で[更新とセキュリティ]をクリックします。  更新とセキュリティ  [Windows Update]画面で[更新プログラムのチェック]をクリックします。　クリックすると、適用できる更新プログラムをダウンロードし、自動的にインストールを行います。  更新プログラムのチェック  必要に応じて再起動します。  再起動の選択  適用できる全ての更新プログラムを適用すると、[最新の状態です]と表示されます。  アップデート完了   以上で、Windows のアップデートは完了です。定期的にこの作業を行うことで、Windows を最新の状態にできます。</description>
+    </item>
+    
+  </channel>
+</rss>

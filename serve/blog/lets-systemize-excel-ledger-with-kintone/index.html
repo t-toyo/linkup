@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='前回の記事はこちらです。
+前回は、Excel で管理台帳を作成するときの2つのコツをご紹介しました。
+手入力をなくして、関数や Excel の機能を使って、ある程度入力を自動化することと、セルやシートの構成をシンプルに保つことが重要ということをご紹介しました。
+このコツを元にして作った台帳を使うことでも、業務の正確性が上がり、効率的にもなっています。今回はこの台帳を元にして、業務をテレワークでも行えるようにしたいと思います。
+テレワークでも利用できるようにするために 台帳を社内にあるパソコンや外付けHDDに保存していては、(基本的には)社外からアクセスできないので、このままの運用ではテレワークには向きません。
+手っ取り早くテレワークで台帳を使う場合は、Google Drive や Dropbox といったクラウドストレージ(インターネット上の保存領域)にファイルを保存することです。 Google Drive の機能や特徴についてはこちらの記事もご覧ください
+ Google Drive   ファイルの共有 
+この画像のように、ファイルをクラウドストレージに保存し、共有することで簡単に社外にいてもこの台帳にアクセスすることができます。
+しかし、これでは Excel の台帳がただ社外からアクセスできるだけなので、これにプラスしてノーコードツールの kintone(キントーン)を活用して、より効率的なシステムにしてみます。
+kintone を試してみる kintone はサイボウズ社が提供しているプログラミングが不要な、業務システム開発プラットフォームです。
+ kintone 
+1ユーザー月額780円と1500円の2つの料金プランがあり、1500円のプランは30日間のお試し期間が用意されています。
+ 最低5ユーザーの契約が必要です。
+  お試し期間   料金プラン 
+外部サービスとの連携、プラグインを使った拡張などができる1500円のプランをおすすめしています。まずは無料のお試し期間に申し込んでみましょう。
+kintone でアプリを作る 備品カテゴリマスタと取引先マスタの作成 kintone のアプリを作成するには、ログイン後に表示されるポータル画面の『アプリ』で ＋マーク をクリックします。その後、『はじめから作成』をクリックします。
+ ポータル画面   はじめから作成 
+まずはじめに、備品のカテゴリを管理するためのアプリ『備品カテゴリマスタ』を作成します。
+Excel と同様にリストでも良いかも知れませんが、リストにした場合はカテゴリを追加したい時にはアプリを編集しなければなりません。そのため、アプリを編集できない人でも簡単にカテゴリを追加できるようにアプリにしました。
+  動画でも紹介しているように、左側に表示されている様々なパーツをドラッグ＆ドロップで右側に配置できます。配置したら『アプリを更新』をクリックします。レコードを追加(Excel での行の追加と同等)をする場合は、右上の ＋マーク をクリックして追加します。
+備品管理アプリの作成 続いて備品を管理するアプリを作成します。'><title>kintone で Excel 台帳をシステム化しよう</title>
+
+<link rel='canonical' href='https://www.linkup.works/blog/lets-systemize-excel-ledger-with-kintone/'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="/css/sharebutton.css">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='kintone で Excel 台帳をシステム化しよう'>
+<meta property='og:description' content='前回の記事はこちらです。
+前回は、Excel で管理台帳を作成するときの2つのコツをご紹介しました。
+手入力をなくして、関数や Excel の機能を使って、ある程度入力を自動化することと、セルやシートの構成をシンプルに保つことが重要ということをご紹介しました。
+このコツを元にして作った台帳を使うことでも、業務の正確性が上がり、効率的にもなっています。今回はこの台帳を元にして、業務をテレワークでも行えるようにしたいと思います。
+テレワークでも利用できるようにするために 台帳を社内にあるパソコンや外付けHDDに保存していては、(基本的には)社外からアクセスできないので、このままの運用ではテレワークには向きません。
+手っ取り早くテレワークで台帳を使う場合は、Google Drive や Dropbox といったクラウドストレージ(インターネット上の保存領域)にファイルを保存することです。 Google Drive の機能や特徴についてはこちらの記事もご覧ください
+ Google Drive   ファイルの共有 
+この画像のように、ファイルをクラウドストレージに保存し、共有することで簡単に社外にいてもこの台帳にアクセスすることができます。
+しかし、これでは Excel の台帳がただ社外からアクセスできるだけなので、これにプラスしてノーコードツールの kintone(キントーン)を活用して、より効率的なシステムにしてみます。
+kintone を試してみる kintone はサイボウズ社が提供しているプログラミングが不要な、業務システム開発プラットフォームです。
+ kintone 
+1ユーザー月額780円と1500円の2つの料金プランがあり、1500円のプランは30日間のお試し期間が用意されています。
+ 最低5ユーザーの契約が必要です。
+  お試し期間   料金プラン 
+外部サービスとの連携、プラグインを使った拡張などができる1500円のプランをおすすめしています。まずは無料のお試し期間に申し込んでみましょう。
+kintone でアプリを作る 備品カテゴリマスタと取引先マスタの作成 kintone のアプリを作成するには、ログイン後に表示されるポータル画面の『アプリ』で ＋マーク をクリックします。その後、『はじめから作成』をクリックします。
+ ポータル画面   はじめから作成 
+まずはじめに、備品のカテゴリを管理するためのアプリ『備品カテゴリマスタ』を作成します。
+Excel と同様にリストでも良いかも知れませんが、リストにした場合はカテゴリを追加したい時にはアプリを編集しなければなりません。そのため、アプリを編集できない人でも簡単にカテゴリを追加できるようにアプリにしました。
+  動画でも紹介しているように、左側に表示されている様々なパーツをドラッグ＆ドロップで右側に配置できます。配置したら『アプリを更新』をクリックします。レコードを追加(Excel での行の追加と同等)をする場合は、右上の ＋マーク をクリックして追加します。
+備品管理アプリの作成 続いて備品を管理するアプリを作成します。'>
+<meta property='og:url' content='https://www.linkup.works/blog/lets-systemize-excel-ledger-with-kintone/'>
+<meta property='og:site_name' content='合同会社 Linkup'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:tag' content='kintone' /><meta property='article:tag' content='Excel' /><meta property='article:tag' content='管理台帳' /><meta property='article:tag' content='テレワーク' /><meta property='article:published_time' content='2021-08-03T09:05:52&#43;09:00'/><meta property='article:modified_time' content='2021-08-03T12:13:48&#43;09:00'/><meta property='og:image' content='https://www.linkup.works/blog/lets-systemize-excel-ledger-with-kintone/title.webp' />
+<meta name="twitter:site" content="@toyocy">
+    <meta name="twitter:creator" content="@toyocy"><meta name="twitter:title" content="kintone で Excel 台帳をシステム化しよう">
+<meta name="twitter:description" content="前回の記事はこちらです。
+前回は、Excel で管理台帳を作成するときの2つのコツをご紹介しました。
+手入力をなくして、関数や Excel の機能を使って、ある程度入力を自動化することと、セルやシートの構成をシンプルに保つことが重要ということをご紹介しました。
+このコツを元にして作った台帳を使うことでも、業務の正確性が上がり、効率的にもなっています。今回はこの台帳を元にして、業務をテレワークでも行えるようにしたいと思います。
+テレワークでも利用できるようにするために 台帳を社内にあるパソコンや外付けHDDに保存していては、(基本的には)社外からアクセスできないので、このままの運用ではテレワークには向きません。
+手っ取り早くテレワークで台帳を使う場合は、Google Drive や Dropbox といったクラウドストレージ(インターネット上の保存領域)にファイルを保存することです。 Google Drive の機能や特徴についてはこちらの記事もご覧ください
+ Google Drive   ファイルの共有 
+この画像のように、ファイルをクラウドストレージに保存し、共有することで簡単に社外にいてもこの台帳にアクセスすることができます。
+しかし、これでは Excel の台帳がただ社外からアクセスできるだけなので、これにプラスしてノーコードツールの kintone(キントーン)を活用して、より効率的なシステムにしてみます。
+kintone を試してみる kintone はサイボウズ社が提供しているプログラミングが不要な、業務システム開発プラットフォームです。
+ kintone 
+1ユーザー月額780円と1500円の2つの料金プランがあり、1500円のプランは30日間のお試し期間が用意されています。
+ 最低5ユーザーの契約が必要です。
+  お試し期間   料金プラン 
+外部サービスとの連携、プラグインを使った拡張などができる1500円のプランをおすすめしています。まずは無料のお試し期間に申し込んでみましょう。
+kintone でアプリを作る 備品カテゴリマスタと取引先マスタの作成 kintone のアプリを作成するには、ログイン後に表示されるポータル画面の『アプリ』で ＋マーク をクリックします。その後、『はじめから作成』をクリックします。
+ ポータル画面   はじめから作成 
+まずはじめに、備品のカテゴリを管理するためのアプリ『備品カテゴリマスタ』を作成します。
+Excel と同様にリストでも良いかも知れませんが、リストにした場合はカテゴリを追加したい時にはアプリを編集しなければなりません。そのため、アプリを編集できない人でも簡単にカテゴリを追加できるようにアプリにしました。
+  動画でも紹介しているように、左側に表示されている様々なパーツをドラッグ＆ドロップで右側に配置できます。配置したら『アプリを更新』をクリックします。レコードを追加(Excel での行の追加と同等)をする場合は、右上の ＋マーク をクリックして追加します。
+備品管理アプリの作成 続いて備品を管理するアプリを作成します。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://www.linkup.works/blog/lets-systemize-excel-ledger-with-kintone/title.webp' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-TQPFW79");</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQPFW79" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "light");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.linkup.works" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>戻る</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/lets-systemize-excel-ledger-with-kintone/">
+                <img src="/blog/lets-systemize-excel-ledger-with-kintone/title_hu5eaa81537ac256d29cda59d033413619_27046_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/lets-systemize-excel-ledger-with-kintone/title_hu5eaa81537ac256d29cda59d033413619_27046_800x0_resize_q75_h2_box_2.webp 800w, /blog/lets-systemize-excel-ledger-with-kintone/title_hu5eaa81537ac256d29cda59d033413619_27046_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="318" 
+                        loading="lazy"
+                        alt="Featured image of post kintone で Excel 台帳をシステム化しよう" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/howto/" >
+                HowTo
+            </a>
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/lets-systemize-excel-ledger-with-kintone/">kintone で Excel 台帳をシステム化しよう</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 8月 3日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p><a class="link" href="https://www.linkup.works/blog/2important-tips-for-creating-a-ledger-in-excel/" >前回の記事はこちら</a>です。</p>
+<p>前回は、Excel で管理台帳を作成するときの2つのコツをご紹介しました。</p>
+<p>手入力をなくして、関数や Excel の機能を使って、ある程度入力を自動化することと、セルやシートの構成をシンプルに保つことが重要ということをご紹介しました。</p>
+<p>このコツを元にして作った台帳を使うことでも、業務の正確性が上がり、効率的にもなっています。今回はこの台帳を元にして、業務をテレワークでも行えるようにしたいと思います。</p>
+<h2 id="テレワークでも利用できるようにするために">テレワークでも利用できるようにするために</h2>
+<p>台帳を社内にあるパソコンや外付けHDDに保存していては、(基本的には)社外からアクセスできないので、このままの運用ではテレワークには向きません。</p>
+<p>手っ取り早くテレワークで台帳を使う場合は、Google Drive や Dropbox といったクラウドストレージ(インターネット上の保存領域)にファイルを保存することです。
+Google Drive の機能や特徴については<a class="link" href="https://www.linkup.works/blog/lets-use-google-drive/" >こちらの記事もご覧ください</a></p>
+<p><figure style="flex-grow: 229; flex-basis: 549px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/drive.webp" data-size="2878x1256"><img src="/blog/lets-systemize-excel-ledger-with-kintone/drive.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/drive_hu7240a02946adc63599b51eabe24a8593_34236_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/drive_hu7240a02946adc63599b51eabe24a8593_34236_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2878"
+				height="1256"
+				loading="lazy"
+				alt="Google Drive">
+		</a>
+		
+		<figcaption>Google Drive</figcaption>
+		
+	</figure> <figure style="flex-grow: 150; flex-basis: 361px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/share.webp" data-size="1278x848"><img src="/blog/lets-systemize-excel-ledger-with-kintone/share.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/share_hu00487125c4ef6a804d2cdac787dfdd55_35198_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/share_hu00487125c4ef6a804d2cdac787dfdd55_35198_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1278"
+				height="848"
+				loading="lazy"
+				alt="ファイルの共有">
+		</a>
+		
+		<figcaption>ファイルの共有</figcaption>
+		
+	</figure></p>
+<p>この画像のように、ファイルをクラウドストレージに保存し、共有することで簡単に社外にいてもこの台帳にアクセスすることができます。</p>
+<p>しかし、これでは Excel の台帳がただ社外からアクセスできるだけなので、これにプラスしてノーコードツールの kintone(キントーン)を活用して、より効率的なシステムにしてみます。</p>
+<h2 id="kintone-を試してみる">kintone を試してみる</h2>
+<p><a class="link" href="https://kintone.cybozu.co.jp/"  target="_blank" rel="noopener"
+    >kintone</a> はサイボウズ社が提供しているプログラミングが不要な、業務システム開発プラットフォームです。</p>
+<p><figure style="flex-grow: 188; flex-basis: 452px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/kintone_home.webp" data-size="2876x1524"><img src="/blog/lets-systemize-excel-ledger-with-kintone/kintone_home.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/kintone_home_huef888a8e84a7680818bb64afd032e107_165676_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/kintone_home_huef888a8e84a7680818bb64afd032e107_165676_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2876"
+				height="1524"
+				loading="lazy"
+				alt="kintone">
+		</a>
+		
+		<figcaption>kintone</figcaption>
+		
+	</figure></p>
+<p>1ユーザー月額780円と1500円の2つの料金プランがあり、1500円のプランは30日間のお試し期間が用意されています。</p>
+<blockquote>
+<p>最低5ユーザーの契約が必要です。</p>
+</blockquote>
+<p><figure style="flex-grow: 215; flex-basis: 516px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/trial.webp" data-size="2054x954"><img src="/blog/lets-systemize-excel-ledger-with-kintone/trial.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/trial_hu03a7c7580942f598bf041ae61d35904f_55812_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/trial_hu03a7c7580942f598bf041ae61d35904f_55812_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2054"
+				height="954"
+				loading="lazy"
+				alt="お試し期間">
+		</a>
+		
+		<figcaption>お試し期間</figcaption>
+		
+	</figure> <figure style="flex-grow: 147; flex-basis: 352px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/pricing.webp" data-size="2214x1506"><img src="/blog/lets-systemize-excel-ledger-with-kintone/pricing.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/pricing_hu2ab472266a24e4001edcb386ab714801_57580_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/pricing_hu2ab472266a24e4001edcb386ab714801_57580_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2214"
+				height="1506"
+				loading="lazy"
+				alt="料金プラン">
+		</a>
+		
+		<figcaption>料金プラン</figcaption>
+		
+	</figure></p>
+<p>外部サービスとの連携、プラグインを使った拡張などができる1500円のプランをおすすめしています。まずは無料のお試し期間に申し込んでみましょう。</p>
+<h2 id="kintone-でアプリを作る">kintone でアプリを作る</h2>
+<h3 id="備品カテゴリマスタと取引先マスタの作成">備品カテゴリマスタと取引先マスタの作成</h3>
+<p>kintone のアプリを作成するには、ログイン後に表示されるポータル画面の『アプリ』で <strong>＋マーク</strong> をクリックします。その後、『はじめから作成』をクリックします。</p>
+<p><figure style="flex-grow: 188; flex-basis: 453px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/kintone_portal.webp" data-size="2880x1524"><img src="/blog/lets-systemize-excel-ledger-with-kintone/kintone_portal.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/kintone_portal_hu875c4d3f556363202a657366617b2866_79986_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/kintone_portal_hu875c4d3f556363202a657366617b2866_79986_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2880"
+				height="1524"
+				loading="lazy"
+				alt="ポータル画面">
+		</a>
+		
+		<figcaption>ポータル画面</figcaption>
+		
+	</figure> <figure style="flex-grow: 203; flex-basis: 487px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/create_app.webp" data-size="2880x1418"><img src="/blog/lets-systemize-excel-ledger-with-kintone/create_app.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/create_app_hu7365968e55485ffab78219e08dd0a38b_88346_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/create_app_hu7365968e55485ffab78219e08dd0a38b_88346_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2880"
+				height="1418"
+				loading="lazy"
+				alt="はじめから作成">
+		</a>
+		
+		<figcaption>はじめから作成</figcaption>
+		
+	</figure></p>
+<p>まずはじめに、備品のカテゴリを管理するためのアプリ『備品カテゴリマスタ』を作成します。</p>
+<p>Excel と同様にリストでも良いかも知れませんが、リストにした場合はカテゴリを追加したい時にはアプリを編集しなければなりません。そのため、アプリを編集できない人でも簡単にカテゴリを追加できるようにアプリにしました。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/cAvlsZnx20w" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>動画でも紹介しているように、左側に表示されている様々なパーツを<strong>ドラッグ＆ドロップ</strong>で右側に配置できます。配置したら『アプリを更新』をクリックします。レコードを追加(Excel での行の追加と同等)をする場合は、右上の <strong>＋マーク</strong> をクリックして追加します。</p>
+<h3 id="備品管理アプリの作成">備品管理アプリの作成</h3>
+<p>続いて備品を管理するアプリを作成します。</p>
+<p>備品管理アプリでは備品のシリアルNoや購入金額、購入日を管理し、貸し出し状況や履歴を見れるようにします。貸し出し状況については貸し出し状況を管理するアプリを後ほど作成します。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/9PhgtPwfjQM" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>ここでのポイントは、備品のカテゴリを表示する『ルックアップ』というフィールドです。</p>
+<p>ルックアップは別のアプリに登録されているレコードを表示します。ここでは先程作った備品カテゴリマスタに登録されているカテゴリを参照できるようにしました。</p>
+<p><figure style="flex-grow: 115; flex-basis: 276px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/lookup_setting.webp" data-size="1542x1338"><img src="/blog/lets-systemize-excel-ledger-with-kintone/lookup_setting.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/lookup_setting_hu4a2624cfd71e1c1e2c50db4ca60249cb_44258_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/lookup_setting_hu4a2624cfd71e1c1e2c50db4ca60249cb_44258_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1542"
+				height="1338"
+				loading="lazy"
+				alt="ルックアップの設定">
+		</a>
+		
+		<figcaption>ルックアップの設定</figcaption>
+		
+	</figure></p>
+<p>動画の中でも操作していますが、レコードを追加する際に『取得』ボタンをクリックすることで、カテゴリマスタに登録されたカテゴリを参照できるようになっています。</p>
+<p>必須項目とし、関連付けるアプリとして<strong>備品カテゴリマスタ</strong>を選択し、コピー元のフィールドとして<strong>備品カテゴリ</strong>を選択します。このように設定することで、備品カテゴリマスタに登録されているカテゴリを表示できます。</p>
+<p>また、シリアルNoの入力欄は<strong>重複禁止</strong>としました。こうすることで<strong>備品の二重登録を防ぐ</strong>ことができます。</p>
+<h3 id="貸し出し管理アプリの作成">貸し出し管理アプリの作成</h3>
+<p>次に貸し出し履歴を管理するアプリを作成します。</p>
+<p>このアプリではどの備品を誰に、いつ貸し出し、いつ返却されたかなどを管理します。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/D_aVgaUGvrg" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>このアプリでもルックアップを使っていますが、応用的な使い方をしています。</p>
+<p>備品管理アプリからシリアルNoを取得しますが、『他のフィールドのコピー』の設定で、一緒にその備品の『カテゴリ』も取得して、貸し出しアプリの『カテゴリ』に自動的に入力しています。</p>
+<p>また、『コピー元のレコードの選択時に表示するフィールド』の設定では、『取得』ボタンをクリックした際に表示される項目として、シリアルNo以外にもカテゴリや購入日などを表示して、貸し出した備品を取り違えないように工夫しています。</p>
+<p>利用者は kintone のユーザーアカウントを持っているユーザーから選択できるようにしました。</p>
+<h3 id="備品管理アプリの改善">備品管理アプリの改善</h3>
+<p>ここまでの作業だけで十分にシステムとして機能しています。</p>
+<p>備品を購入したら備品管理アプリに備品を追加します。貸し出した際には貸し出し管理アプリで利用者と、どの備品を貸し出したか、いつ返却されたかなどを登録します。</p>
+<p>更に改善するとしたら、備品管理アプリを見た時に、今誰に貸し出しているかを見れると便利です。</p>
+<p>そこで備品管理アプリに機能を追加し、貸し出し管理アプリから該当する備品の貸し出し履歴を取得できるようにします。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/rs38XLCD_Qw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>備品管理アプリに『関連レコード一覧』フィールドを追加します。</p>
+<p>参照するアプリで『貸し出し履歴アプリ』を選択し、表示するレコードの条件には『シリアルNo』を選択します。シリアルNoは二重登録ができないようにしているので、該当する備品の履歴だけが表示されます。</p>
+<p>貸し出し履歴アプリから、該当するシリアルNoの備品を貸し出した日、利用者、返却の状況、返却日などを取得して表示するように設定します。</p>
+<p>備品管理アプリを再度表示すると、その備品の貸し出し履歴が表示されるようになりました。これでその備品の貸し出し状況や過去の履歴が簡単に表示できます。</p>
+<p>もちろん、新規に追加した備品には貸し出した履歴はないので、何も表示されません。
+<figure style="flex-grow: 120; flex-basis: 289px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/add_fixture.webp" data-size="1846x1528"><img src="/blog/lets-systemize-excel-ledger-with-kintone/add_fixture.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/add_fixture_hu346590f503ff0125b1a8195f875c36bc_26528_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/add_fixture_hu346590f503ff0125b1a8195f875c36bc_26528_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1846"
+				height="1528"
+				loading="lazy"
+				alt="追加した備品の貸し出し履歴">
+		</a>
+		
+		<figcaption>追加した備品の貸し出し履歴</figcaption>
+		
+	</figure></p>
+<h2 id="まとめ">まとめ</h2>
+<p>今回2回に渡って、Excel 台帳を作るコツと、システム化してテレワークで利用できるようにする方法をご紹介してきました。</p>
+<p>kintone はユーザーアカウントを持っていて、インターネットに接続できる環境であればどこからでもアクセスできるので、備品を管理する台帳以外にもアイデア次第でプロジェクトを管理したり、申請業務をしたり、顧客管理をしたりなど、様々な使い方ができます。</p>
+<p>また、アプリストアには様々なアプリが登録されており、簡単に環境に追加することができるので、活用してみてください。
+<figure style="flex-grow: 188; flex-basis: 452px">
+		<a href="/blog/lets-systemize-excel-ledger-with-kintone/app_store.webp" data-size="2880x1526"><img src="/blog/lets-systemize-excel-ledger-with-kintone/app_store.webp"
+				srcset="/blog/lets-systemize-excel-ledger-with-kintone/app_store_huadec263e835fb01120b38206bc152bad_183272_480x0_resize_q75_h2_box_2.webp 480w, /blog/lets-systemize-excel-ledger-with-kintone/app_store_huadec263e835fb01120b38206bc152bad_183272_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2880"
+				height="1526"
+				loading="lazy"
+				alt="kintoneアプリストア">
+		</a>
+		
+		<figcaption>kintoneアプリストア</figcaption>
+		
+	</figure></p>
+
+</section>
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.linkup.works%2fblog%2flets-systemize-excel-ledger-with-kintone%2f&text=kintone%20%e3%81%a7%20Excel%20%e5%8f%b0%e5%b8%b3%e3%82%92%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Tweet"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.linkup.works%2fblog%2flets-systemize-excel-ledger-with-kintone%2f&title=kintone%20%e3%81%a7%20Excel%20%e5%8f%b0%e5%b8%b3%e3%82%92%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.linkup.works%2fblog%2flets-systemize-excel-ledger-with-kintone%2f&t=kintone%20%e3%81%a7%20Excel%20%e5%8f%b0%e5%b8%b3%e3%82%92%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.linkup.works%2fblog%2flets-systemize-excel-ledger-with-kintone%2f&title=kintone%20%e3%81%a7%20Excel%20%e5%8f%b0%e5%b8%b3%e3%82%92%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e5%8c%96%e3%81%97%e3%82%88%e3%81%86%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="pocket"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kintone/">kintone</a>
+        
+            <a href="/tags/excel/">Excel</a>
+        
+            <a href="/tags/%E7%AE%A1%E7%90%86%E5%8F%B0%E5%B8%B3/">管理台帳</a>
+        
+            <a href="/tags/%E3%83%86%E3%83%AC%E3%83%AF%E3%83%BC%E3%82%AF/">テレワーク</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span class="article-time--modified">
+            最終更新 2021年 8月 3日
+        </span>
+    </section></footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">関連するコンテンツ</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/blog/2important-tips-for-creating-a-ledger-in-excel/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/2important-tips-for-creating-a-ledger-in-excel/title.79b4b3126fdc5cd5512b1a1b7d8e646a_huba63cd0bce6a31323a154d235e3a8464_14690_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-ebSzEm/cXNVRKxobfY5kag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Excel で台帳を作るときの2つの重要なコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/_hu9f8e920ddd3652413b71c7721c2a3d9b_71102_8610181c132d9c729c96c8eaf25674ed.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-3nlcSm9RIPiDIdxONrPR1Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Excel での管理台帳作成のコツとその限界</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/_hua97b4ceb40d43b5408ce6c6146a0cf02_91496_bd26e668d0b969f0544ca372725976f6.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-kYuWwl/zFT75bv7MCH6X4g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">事務作業を効率化すべき3つの理由と6つのコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/disadvantages-of-attribution-and-how-to-resolve/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/disadvantages-of-attribution-and-how-to-resolve/_hubdd1b4681019a3b367ec4a16609af947_49350_460c365d2fafde8fd7f0b625fd516c6a.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-VJx0m8oJkbzY6w/RAve&#43;9Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">業務の属人化のデメリットと解消方法</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/how-to-send-faxes-more-easily-with-online-fax-service/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/how-to-send-faxes-more-easily-with-online-fax-service/fax.f35492c567509cbe1c3eaaa65da2a5f4_hu373efeb9c999d573308c71643b50f26a_11610_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-81SSxWdQnL4cPqqmXaKl9A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">オンラインFAX でもっと手軽に FAX を送る方法</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 合同会社 Linkup
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.4.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <h2 class="widget-title section-title">目次</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#テレワークでも利用できるようにするために">テレワークでも利用できるようにするために</a></li>
+    <li><a href="#kintone-を試してみる">kintone を試してみる</a></li>
+    <li><a href="#kintone-でアプリを作る">kintone でアプリを作る</a>
+      <ol>
+        <li><a href="#備品カテゴリマスタと取引先マスタの作成">備品カテゴリマスタと取引先マスタの作成</a></li>
+        <li><a href="#備品管理アプリの作成">備品管理アプリの作成</a></li>
+        <li><a href="#貸し出し管理アプリの作成">貸し出し管理アプリの作成</a></li>
+        <li><a href="#備品管理アプリの改善">備品管理アプリの改善</a></li>
+      </ol>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

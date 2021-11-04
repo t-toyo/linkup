@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adobe Scan on 合同会社 Linkup</title>
+    <link>https://www.linkup.works/tags/adobe-scan/</link>
+    <description>Recent content in Adobe Scan on 合同会社 Linkup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 30 Nov 2020 15:11:00 +0900</lastBuildDate><atom:link href="https://www.linkup.works/tags/adobe-scan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoogleDriveとスマホアプリでお手軽ペーパーレス</title>
+      <link>https://www.linkup.works/blog/easy-way-to-paperless/</link>
+      <pubDate>Mon, 30 Nov 2020 15:11:00 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/blog/easy-way-to-paperless/</guid>
+      <description>日常的に紙を使うことが多いと、必然的に紙を保管する必要があります。当然、紙を使う業務の量が多ければ多いほど、そして保存期間が長ければ長いほどその量は膨大なものになります。書類を探すときは、管理台帳やバインダーに貼られたインデックス、記憶を頼りにしながら、バインダーやクリアフォルダから探すということも多いと思います。
+大手文具メーカーのコクヨが 1031 名のビジネスパーソンを対象に 2017年に行った調査では、1日のうち書類を探している時間は平均20分になることがわかりました。年換算ではおよそ80時間にものぼります。
+ 書類探しの時間 
+探す時間以外にも保存するためのクリアフォルダ、バインダーなどの備品、紙を保存するスペース(書棚)と言ったもの必要になってきます。
+紙を探したり保存することはペーパーレス化することで大幅に効率化することができます。ペーパーレス化というと専用のソフトウェアや読取りを行う機器などが必要になるイメージがありますが、Google Drive と書類をスキャンするスマホアプリを使って簡単に始める方法をご紹介します。
+簡単ペーパーレス化の概要 簡単ペーパーレスの流れは、まずはじめに紙の文書を PDF 形式でスキャンできるスマホアプリで撮影します。その後、PDF ファイルとして保存します。次に保存先となる Google Drive に、作成した PDF ファイルをアップロードします。これだけでおおよその作業は完了です。
+Google Drive では OCR(光学文字認識)の機能が有効になっており、紙に印刷された文字を自動的に読み取って認識してくれます。ちなみに手書きの文字より活字の方が読み取り精度が高くなります。
+アップロードしたファイルを検索する場合は、Google Drive の検索バーからキーワードを入力して検索することができます。OCR で文書内の文字が認識されているので、文書のファイル名だけでなく、文書に記載されている文字列やキーワードでも検索ができます。
+Google Drive の準備 個人用の G Mail を利用していると、一緒に Google Drive も利用できます。ですが、社内で利用している文書を保存するのが好ましくない場合もありますので、企業向けの Google Workspace を利用することをおすすめします。
+企業のドメインでメールアドレスを作成できたり、より容量の大きな Google Drive やオンライン会議ツールを利用できます。Google Workspace を導入して上手く使うだけで多くの業務の生産性を上げることができます。
+スマホアプリの準備 文書のスキャンを行うスマホアプリは様々ありますが、ここでは簡単に利用できる Adobe Scan を利用します。お手持ちの iPhone や Android スマホのアプリダウンロードの画面で「Adobe Scan」と検索してインストールしてください。 また、Google Drive のアプリもダウンロードしてログインします。こうすることでファイルの共有メニューを開いたときに、共有先として Google Drive を選択できるようになります。
+ Adobe Scan   Google Drive</description>
+    </item>
+    
+  </channel>
+</rss>

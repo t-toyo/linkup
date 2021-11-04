@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='このブログではクラウドや業務改善についての記事をよく書いているのですが、Excel での台帳管理について検索した結果、このブログの記事を見ていただいている方も多いようです。  検索ワード 
+Excel の使い方、台帳の作り方のコツが分かっているかどうかが、使いやすい台帳のカギになっています。次の課題は Excel の台帳あるあるではないでしょうか。
+ 入力間違いが含まれている 情報が古い 関数が複雑で何をしているかわからない 関数が複雑なので、変更や修正、機能追加が簡単にできない  前任者の前任者が作った台帳が今もそのまま使われているために、秘伝のタレ化してしまっていて、変えるに変えれないということもよくあると思います。
+今回は2回に分けて台帳を作るコツと、作った台帳をより効率的に、そしてテレワークでも使えるようにするにはどうしたらよいかを書いていきたいと思います。
+台帳を見直すその前に 秘伝のタレと化した Excel 台帳にいきなり手を入れるのは、当然のことながらなかなかリスクがあります。まずは次のステップでこの Excel 台帳で何を管理しているか、どんな作業をしているかを整理しましょう。
+台帳で管理している目的を再確認する 前任者の前任者から引き継いだような長年続いている業務の場合、その業務の目的が曖昧だったり、別の仕組みに置き換わっていることがあります。そもそもなぜこの台帳が必要なのか、なければ何が困るのかを改めて確認してみましょう。
+同じような台帳を作っていたりする場合もあるので、自分が担当している業務以外にも目を向けてみるのも良いと思います。
+手順を起こす 台帳の目的や必要性を再確認できたら、台帳に関する作業の手順を起こします。
+1つの台帳を使った作業は思ったよりも多いはずです。例えば備品管理の台帳を例にとると次のような作業があると思います。
+ 備品の購入 備品の払い出し 備品の返却 備品の廃棄 棚卸し  それぞれの作業で手順を起こします。作業手順を起こすコツはこちらの記事も参考にしてみてください。
+事務作業を効率化すべき3つの理由と6つのコツ
+コツは、その手順を行うために必要なもの(インプット) と、その手順を実施した結果が何か(アウトプット) を明確に書くことと、箇条書きで書くことです。 この2つを意識して書くだけで手順全体の見通しがよくなります。
+また、次のような例外パターンも漏れなく書いてください。
+ 文房具をA社から購入するが、コピー用紙だけはB社から購入し、FAXで発注する
+ 台帳の作成そのものには大きく影響はしないかも知れませんが、ここで起こした手順を元に、システム化(第2回で書きます)をする際には重要な情報となります。また、例外だらけの作業だとすると、それをできる限り統一できないかを検討してみるのも良いでしょう。
+台帳を作るコツ 前置きが長くなりましたが、ここからは、備品管理をしている台帳を例に解説したいと思います。
+ 備品台帳 
+一つのシートですべての作業が完結できそうで、一見これでもいいように見えますが、次のような課題が見えてきます。
+ 長く使い続けると、購入履歴の行だけがどんどん増えて見づらくなる 在庫を求める関数が何をやっているのかわかりにくい  購入履歴から備品の文字列をカウントして購入数を算出(COUNTIF(B:B,$H3)) そこから、返却日が空欄(未返却状態)の備品の数を引く(-COUNTIFS(L:L,$H3,N:N,&amp;quot;&amp;quot;))   備品の名前が統一されていない  購入履歴の『ﾌﾟﾛｼﾞｪｸﾀー』、払い出しの『プロジェクタ』   手入力が多いので入力間違いが起こりそう  IDの欄など連番が正しくない 入力項目の統一ができない   現在の在庫数が正しくない  関数で求めているが、備品の名前がきちんと統一されていないので、在庫数が正しくない場合がある プロジェクタの在庫は2台で1台貸出中なので台数は合っているが、返却されても1台のまま    台帳を作るコツとしては次の2つを意識してみましょう。'><title>Excel で台帳を作るときの2つの重要なコツ</title>
+
+<link rel='canonical' href='https://www.linkup.works/blog/2important-tips-for-creating-a-ledger-in-excel/'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="/css/sharebutton.css">
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Excel で台帳を作るときの2つの重要なコツ'>
+<meta property='og:description' content='このブログではクラウドや業務改善についての記事をよく書いているのですが、Excel での台帳管理について検索した結果、このブログの記事を見ていただいている方も多いようです。  検索ワード 
+Excel の使い方、台帳の作り方のコツが分かっているかどうかが、使いやすい台帳のカギになっています。次の課題は Excel の台帳あるあるではないでしょうか。
+ 入力間違いが含まれている 情報が古い 関数が複雑で何をしているかわからない 関数が複雑なので、変更や修正、機能追加が簡単にできない  前任者の前任者が作った台帳が今もそのまま使われているために、秘伝のタレ化してしまっていて、変えるに変えれないということもよくあると思います。
+今回は2回に分けて台帳を作るコツと、作った台帳をより効率的に、そしてテレワークでも使えるようにするにはどうしたらよいかを書いていきたいと思います。
+台帳を見直すその前に 秘伝のタレと化した Excel 台帳にいきなり手を入れるのは、当然のことながらなかなかリスクがあります。まずは次のステップでこの Excel 台帳で何を管理しているか、どんな作業をしているかを整理しましょう。
+台帳で管理している目的を再確認する 前任者の前任者から引き継いだような長年続いている業務の場合、その業務の目的が曖昧だったり、別の仕組みに置き換わっていることがあります。そもそもなぜこの台帳が必要なのか、なければ何が困るのかを改めて確認してみましょう。
+同じような台帳を作っていたりする場合もあるので、自分が担当している業務以外にも目を向けてみるのも良いと思います。
+手順を起こす 台帳の目的や必要性を再確認できたら、台帳に関する作業の手順を起こします。
+1つの台帳を使った作業は思ったよりも多いはずです。例えば備品管理の台帳を例にとると次のような作業があると思います。
+ 備品の購入 備品の払い出し 備品の返却 備品の廃棄 棚卸し  それぞれの作業で手順を起こします。作業手順を起こすコツはこちらの記事も参考にしてみてください。
+事務作業を効率化すべき3つの理由と6つのコツ
+コツは、その手順を行うために必要なもの(インプット) と、その手順を実施した結果が何か(アウトプット) を明確に書くことと、箇条書きで書くことです。 この2つを意識して書くだけで手順全体の見通しがよくなります。
+また、次のような例外パターンも漏れなく書いてください。
+ 文房具をA社から購入するが、コピー用紙だけはB社から購入し、FAXで発注する
+ 台帳の作成そのものには大きく影響はしないかも知れませんが、ここで起こした手順を元に、システム化(第2回で書きます)をする際には重要な情報となります。また、例外だらけの作業だとすると、それをできる限り統一できないかを検討してみるのも良いでしょう。
+台帳を作るコツ 前置きが長くなりましたが、ここからは、備品管理をしている台帳を例に解説したいと思います。
+ 備品台帳 
+一つのシートですべての作業が完結できそうで、一見これでもいいように見えますが、次のような課題が見えてきます。
+ 長く使い続けると、購入履歴の行だけがどんどん増えて見づらくなる 在庫を求める関数が何をやっているのかわかりにくい  購入履歴から備品の文字列をカウントして購入数を算出(COUNTIF(B:B,$H3)) そこから、返却日が空欄(未返却状態)の備品の数を引く(-COUNTIFS(L:L,$H3,N:N,&amp;quot;&amp;quot;))   備品の名前が統一されていない  購入履歴の『ﾌﾟﾛｼﾞｪｸﾀー』、払い出しの『プロジェクタ』   手入力が多いので入力間違いが起こりそう  IDの欄など連番が正しくない 入力項目の統一ができない   現在の在庫数が正しくない  関数で求めているが、備品の名前がきちんと統一されていないので、在庫数が正しくない場合がある プロジェクタの在庫は2台で1台貸出中なので台数は合っているが、返却されても1台のまま    台帳を作るコツとしては次の2つを意識してみましょう。'>
+<meta property='og:url' content='https://www.linkup.works/blog/2important-tips-for-creating-a-ledger-in-excel/'>
+<meta property='og:site_name' content='合同会社 Linkup'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:tag' content='Excel' /><meta property='article:tag' content='管理台帳' /><meta property='article:published_time' content='2021-07-30T16:42:16&#43;09:00'/><meta property='article:modified_time' content='2021-08-03T12:13:48&#43;09:00'/><meta property='og:image' content='https://www.linkup.works/blog/2important-tips-for-creating-a-ledger-in-excel/title.webp' />
+<meta name="twitter:site" content="@toyocy">
+    <meta name="twitter:creator" content="@toyocy"><meta name="twitter:title" content="Excel で台帳を作るときの2つの重要なコツ">
+<meta name="twitter:description" content="このブログではクラウドや業務改善についての記事をよく書いているのですが、Excel での台帳管理について検索した結果、このブログの記事を見ていただいている方も多いようです。  検索ワード 
+Excel の使い方、台帳の作り方のコツが分かっているかどうかが、使いやすい台帳のカギになっています。次の課題は Excel の台帳あるあるではないでしょうか。
+ 入力間違いが含まれている 情報が古い 関数が複雑で何をしているかわからない 関数が複雑なので、変更や修正、機能追加が簡単にできない  前任者の前任者が作った台帳が今もそのまま使われているために、秘伝のタレ化してしまっていて、変えるに変えれないということもよくあると思います。
+今回は2回に分けて台帳を作るコツと、作った台帳をより効率的に、そしてテレワークでも使えるようにするにはどうしたらよいかを書いていきたいと思います。
+台帳を見直すその前に 秘伝のタレと化した Excel 台帳にいきなり手を入れるのは、当然のことながらなかなかリスクがあります。まずは次のステップでこの Excel 台帳で何を管理しているか、どんな作業をしているかを整理しましょう。
+台帳で管理している目的を再確認する 前任者の前任者から引き継いだような長年続いている業務の場合、その業務の目的が曖昧だったり、別の仕組みに置き換わっていることがあります。そもそもなぜこの台帳が必要なのか、なければ何が困るのかを改めて確認してみましょう。
+同じような台帳を作っていたりする場合もあるので、自分が担当している業務以外にも目を向けてみるのも良いと思います。
+手順を起こす 台帳の目的や必要性を再確認できたら、台帳に関する作業の手順を起こします。
+1つの台帳を使った作業は思ったよりも多いはずです。例えば備品管理の台帳を例にとると次のような作業があると思います。
+ 備品の購入 備品の払い出し 備品の返却 備品の廃棄 棚卸し  それぞれの作業で手順を起こします。作業手順を起こすコツはこちらの記事も参考にしてみてください。
+事務作業を効率化すべき3つの理由と6つのコツ
+コツは、その手順を行うために必要なもの(インプット) と、その手順を実施した結果が何か(アウトプット) を明確に書くことと、箇条書きで書くことです。 この2つを意識して書くだけで手順全体の見通しがよくなります。
+また、次のような例外パターンも漏れなく書いてください。
+ 文房具をA社から購入するが、コピー用紙だけはB社から購入し、FAXで発注する
+ 台帳の作成そのものには大きく影響はしないかも知れませんが、ここで起こした手順を元に、システム化(第2回で書きます)をする際には重要な情報となります。また、例外だらけの作業だとすると、それをできる限り統一できないかを検討してみるのも良いでしょう。
+台帳を作るコツ 前置きが長くなりましたが、ここからは、備品管理をしている台帳を例に解説したいと思います。
+ 備品台帳 
+一つのシートですべての作業が完結できそうで、一見これでもいいように見えますが、次のような課題が見えてきます。
+ 長く使い続けると、購入履歴の行だけがどんどん増えて見づらくなる 在庫を求める関数が何をやっているのかわかりにくい  購入履歴から備品の文字列をカウントして購入数を算出(COUNTIF(B:B,$H3)) そこから、返却日が空欄(未返却状態)の備品の数を引く(-COUNTIFS(L:L,$H3,N:N,&amp;quot;&amp;quot;))   備品の名前が統一されていない  購入履歴の『ﾌﾟﾛｼﾞｪｸﾀー』、払い出しの『プロジェクタ』   手入力が多いので入力間違いが起こりそう  IDの欄など連番が正しくない 入力項目の統一ができない   現在の在庫数が正しくない  関数で求めているが、備品の名前がきちんと統一されていないので、在庫数が正しくない場合がある プロジェクタの在庫は2台で1台貸出中なので台数は合っているが、返却されても1台のまま    台帳を作るコツとしては次の2つを意識してみましょう。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://www.linkup.works/blog/2important-tips-for-creating-a-ledger-in-excel/title.webp' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',"GTM-TQPFW79");</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQPFW79" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "light");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.linkup.works" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>戻る</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blog/2important-tips-for-creating-a-ledger-in-excel/">
+                <img src="/blog/2important-tips-for-creating-a-ledger-in-excel/title_huba63cd0bce6a31323a154d235e3a8464_14690_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/blog/2important-tips-for-creating-a-ledger-in-excel/title_huba63cd0bce6a31323a154d235e3a8464_14690_800x0_resize_q75_h2_box_2.webp 800w, /blog/2important-tips-for-creating-a-ledger-in-excel/title_huba63cd0bce6a31323a154d235e3a8464_14690_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="318" 
+                        loading="lazy"
+                        alt="Featured image of post Excel で台帳を作るときの2つの重要なコツ" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/howto/" >
+                HowTo
+            </a>
+        
+            <a href="/categories/%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" >
+                業務改善
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/blog/2important-tips-for-creating-a-ledger-in-excel/">Excel で台帳を作るときの2つの重要なコツ</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">2021年 7月 30日</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>このブログではクラウドや業務改善についての記事をよく書いているのですが、Excel での台帳管理について検索した結果、このブログの記事を見ていただいている方も多いようです。
+<figure style="flex-grow: 94; flex-basis: 227px">
+		<a href="/blog/2important-tips-for-creating-a-ledger-in-excel/query.webp" data-size="1318x1392"><img src="/blog/2important-tips-for-creating-a-ledger-in-excel/query.webp"
+				srcset="/blog/2important-tips-for-creating-a-ledger-in-excel/query_hu712f02a4374da10188a089f4c223449b_43880_480x0_resize_q75_h2_box_2.webp 480w, /blog/2important-tips-for-creating-a-ledger-in-excel/query_hu712f02a4374da10188a089f4c223449b_43880_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1318"
+				height="1392"
+				loading="lazy"
+				alt="検索ワード">
+		</a>
+		
+		<figcaption>検索ワード</figcaption>
+		
+	</figure></p>
+<p>Excel の使い方、台帳の作り方のコツが分かっているかどうかが、使いやすい台帳のカギになっています。次の課題は Excel の台帳あるあるではないでしょうか。</p>
+<ul>
+<li>入力間違いが含まれている</li>
+<li>情報が古い</li>
+<li>関数が複雑で何をしているかわからない</li>
+<li>関数が複雑なので、変更や修正、機能追加が簡単にできない</li>
+</ul>
+<p>前任者の前任者が作った台帳が今もそのまま使われているために、<strong>秘伝のタレ化</strong>してしまっていて、変えるに変えれないということもよくあると思います。</p>
+<p>今回は2回に分けて<strong>台帳を作るコツ</strong>と、作った台帳をより効率的に、そして<strong>テレワークでも使えるようにする</strong>にはどうしたらよいかを書いていきたいと思います。</p>
+<h2 id="台帳を見直すその前に">台帳を見直すその前に</h2>
+<p>秘伝のタレと化した Excel 台帳にいきなり手を入れるのは、当然のことながらなかなかリスクがあります。まずは次のステップでこの Excel 台帳で何を管理しているか、どんな作業をしているかを整理しましょう。</p>
+<h3 id="台帳で管理している目的を再確認する">台帳で管理している目的を再確認する</h3>
+<p>前任者の前任者から引き継いだような長年続いている業務の場合、その業務の目的が曖昧だったり、別の仕組みに置き換わっていることがあります。<strong>そもそもなぜこの台帳が必要なのか</strong>、なければ何が困るのかを改めて確認してみましょう。</p>
+<p>同じような台帳を作っていたりする場合もあるので、自分が担当している業務以外にも目を向けてみるのも良いと思います。</p>
+<h3 id="手順を起こす">手順を起こす</h3>
+<p>台帳の目的や必要性を再確認できたら、台帳に関する作業の手順を起こします。</p>
+<p>1つの台帳を使った作業は思ったよりも多いはずです。例えば備品管理の台帳を例にとると次のような作業があると思います。</p>
+<ul>
+<li>備品の購入</li>
+<li>備品の払い出し</li>
+<li>備品の返却</li>
+<li>備品の廃棄</li>
+<li>棚卸し</li>
+</ul>
+<p>それぞれの作業で手順を起こします。作業手順を起こすコツはこちらの記事も参考にしてみてください。</p>
+<p><a class="link" href="https://linkup.works/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/#%E6%89%8B%E9%A0%86%E6%9B%B8%E3%82%92%E4%BD%9C%E3%82%8B"  target="_blank" rel="noopener"
+    >事務作業を効率化すべき3つの理由と6つのコツ</a></p>
+<p>コツは、<strong>その手順を行うために必要なもの(インプット)</strong> と、<strong>その手順を実施した結果が何か(アウトプット)</strong> を明確に書くことと、<strong>箇条書きで書く</strong>ことです。
+この2つを意識して書くだけで手順全体の見通しがよくなります。</p>
+<p>また、次のような例外パターンも漏れなく書いてください。</p>
+<blockquote>
+<p>文房具をA社から購入するが、コピー用紙だけはB社から購入し、FAXで発注する</p>
+</blockquote>
+<p>台帳の作成そのものには大きく影響はしないかも知れませんが、ここで起こした手順を元に、システム化(第2回で書きます)をする際には重要な情報となります。また、例外だらけの作業だとすると、それをできる限り統一できないかを検討してみるのも良いでしょう。</p>
+<h2 id="台帳を作るコツ">台帳を作るコツ</h2>
+<p>前置きが長くなりましたが、ここからは、備品管理をしている台帳を例に解説したいと思います。</p>
+<p><figure style="flex-grow: 169; flex-basis: 406px">
+		<a href="/blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger.webp" data-size="2830x1670"><img src="/blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger.webp"
+				srcset="/blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger_hu5d888ef9d83b86711e7406311b5cf1e9_108184_480x0_resize_q75_h2_box_2.webp 480w, /blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger_hu5d888ef9d83b86711e7406311b5cf1e9_108184_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2830"
+				height="1670"
+				loading="lazy"
+				alt="備品台帳">
+		</a>
+		
+		<figcaption>備品台帳</figcaption>
+		
+	</figure></p>
+<p>一つのシートですべての作業が完結できそうで、一見これでもいいように見えますが、次のような課題が見えてきます。</p>
+<ul>
+<li>長く使い続けると、購入履歴の行だけがどんどん増えて見づらくなる</li>
+<li>在庫を求める関数が何をやっているのかわかりにくい
+<ul>
+<li>購入履歴から備品の文字列をカウントして購入数を算出(COUNTIF(B:B,$H3))</li>
+<li>そこから、返却日が空欄(未返却状態)の備品の数を引く(-COUNTIFS(L:L,$H3,N:N,&quot;&quot;))</li>
+</ul>
+</li>
+<li>備品の名前が統一されていない
+<ul>
+<li>購入履歴の『ﾌﾟﾛｼﾞｪｸﾀー』、払い出しの『プロジェクタ』</li>
+</ul>
+</li>
+<li>手入力が多いので入力間違いが起こりそう
+<ul>
+<li>IDの欄など連番が正しくない</li>
+<li>入力項目の統一ができない</li>
+</ul>
+</li>
+<li>現在の在庫数が正しくない
+<ul>
+<li>関数で求めているが、備品の名前がきちんと統一されていないので、在庫数が正しくない場合がある</li>
+<li>プロジェクタの在庫は2台で1台貸出中なので台数は合っているが、返却されても1台のまま</li>
+</ul>
+</li>
+</ul>
+<p>台帳を作るコツとしては次の2つを意識してみましょう。</p>
+<ol>
+<li>手作業させない</li>
+<li>役割を明確にしてシンプルにする</li>
+</ol>
+<h3 id="手作業させない">手作業させない</h3>
+<p>備品の名前や利用者名、ID など入力間違いや、表記のゆらぎなどがあると、集計をした際に正しくない結果になる場合があります。</p>
+<p>在庫を求める関数を見てみると、購入履歴の中からH4セルの『プロジェクター』を検索条件にして総数をカウントしています。そして、総数から<strong>未返却の台数を引いた数</strong>が現状の在庫数となります。</p>
+<p>しかし、B10セルの『ﾌﾟﾛｼﾞｪｸﾀｰ』は検索条件(プロジェクター)に一致しないので、<strong>総数にカウントされません。</strong></p>
+<p>また、払い出したL2セルの『プロジェクタ』も検索条件(プロジェクター)に一致していないため、<strong>未返却かどうかが判定されません。</strong></p>
+<p>そのため、『プロジェクター』の<strong>総数は1台</strong>で<strong>未返却の台数は条件不一致で0</strong>なので、現状の<strong>在庫数は1台</strong>となります。</p>
+<p>今は数字上は合っていますが、L2セルの『プロジェクタ』が返却されて(返却日を入力して)も現状の在庫数が増えないので、現状の<strong>在庫数が1台のまま(正しくは2台)</strong> です。</p>
+<p><figure style="flex-grow: 400; flex-basis: 961px">
+		<a href="/blog/2important-tips-for-creating-a-ledger-in-excel/wrong_ledger.webp" data-size="1594x398"><img src="/blog/2important-tips-for-creating-a-ledger-in-excel/wrong_ledger.webp"
+				srcset="/blog/2important-tips-for-creating-a-ledger-in-excel/wrong_ledger_hu4b9fb076a8117f09c2de53d82ca7e6a4_27654_480x0_resize_q75_h2_box_2.webp 480w, /blog/2important-tips-for-creating-a-ledger-in-excel/wrong_ledger_hu4b9fb076a8117f09c2de53d82ca7e6a4_27654_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="1594"
+				height="398"
+				loading="lazy"
+				alt="在庫数が不一致">
+		</a>
+		
+		<figcaption>在庫数が不一致</figcaption>
+		
+	</figure></p>
+<p>手作業が多い台帳はこうした集計間違いや正しくない情報が紛れ込みやすくなります。台帳に1つでも正しくない情報が紛れ込んでいると、その台帳に登録されている情報が本当に正しいのか疑わしくなります。</p>
+<p>結果的に、正しい情報に直す手間が発生したり、間違った情報を元に作業を進めた結果、手戻りや管理している情報によっては取引先に損害を与えることに繋がりかねません。</p>
+<p>入力する項目がある程度決まっているようであれば、<strong>入力規則</strong> を使いましょう。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/Bf-0B9rC0Lw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>リストの中から入力項目を選べるようにして、リストにない項目は入力できないようにすることができます。これによって、用語を統一することができますし、入力間違いを防止することができます。</p>
+<p>しかし、入力規則も選択肢が多すぎると視認性が悪くなり、かえって使いづらくなります。個人的な感覚ですが、10個〜20個くらいまでが限界ではないでしょうか。</p>
+<blockquote>
+<p>※都道府県を選ぶようなリストの場合は、ある程度並びや選択できる項目がわかっているので例外的と言えます。</p>
+</blockquote>
+<p>その場合は、次の章でも紹介しますが、<strong>役割を明確にしてシンプルにする</strong>ことが重要になりますので、入力規則の項目をより細分化したり、カテゴリ分けできないか検討してみましょう。</p>
+<p>また、IDやNoのように、連番をふる場合は、関数を使うことをおすすめします。途中に行を追加しても自動的に連番をふり直してくれますし、番号のふり間違いもなくなります。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/WY1607Upzzc" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<pre tabindex="0"><code>=row()-x
+</code></pre><p>という関数は、行番号(<code>row()</code>)からXの数を引いた値を導き出す関数です。そのため、この台帳では3行目(行番号3)から No1 が始まるので、<code>=row()-2</code>としています。</p>
+<p>連番の先頭や後ろに、何らかの文字列を追加することもできます。その場合は<code>=&quot;文字列&quot;&amp;ROW()-X</code>や<code>=ROW()-X&amp;&quot;文字列&quot;</code>とします。</p>
+<h3 id="役割を明確にしてシンプルにする">役割を明確にしてシンプルにする</h3>
+<p>よくありがちなのが、一つのセルや一つのシートで、<strong>多くのことをやりすぎている</strong>ということです。例で作成した備品の管理台帳では、1つのシートで購入履歴、在庫、払い出しの履歴の3つを管理している状態です。</p>
+<p>例えば、しばらくこの台帳を運用していると、在庫の管理は、管理している備品の製品が増えない限りは行が増えませんが、購入履歴や払い出しの履歴が長くなる一方です。その結果、台帳が使いづらくなることが予想されます。また、各管理項目で列を追加した時に、関数が崩れたりする場合があります。</p>
+<p><figure style="flex-grow: 169; flex-basis: 406px">
+		<a href="/blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger.webp" data-size="2830x1670"><img src="/blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger.webp"
+				srcset="/blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger_hu5d888ef9d83b86711e7406311b5cf1e9_108184_480x0_resize_q75_h2_box_2.webp 480w, /blog/2important-tips-for-creating-a-ledger-in-excel/sample_ledger_hu5d888ef9d83b86711e7406311b5cf1e9_108184_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="2830"
+				height="1670"
+				loading="lazy"
+				alt="備品台帳">
+		</a>
+		
+		<figcaption>備品台帳</figcaption>
+		
+	</figure></p>
+<p>また、在庫の数を求める関数も、ひと目では何をしているのか、どんな計算式なのかわかりにくく、修正を加える際にどんな動きをしているのか追いかけながら修正が必要になります。この関数自体はまだ簡単な方ですが、関数が長くなればなるほど修正が難しくなります。</p>
+<p><figure style="flex-grow: 1554; flex-basis: 3730px">
+		<a href="/blog/2important-tips-for-creating-a-ledger-in-excel/function.webp" data-size="746x48"><img src="/blog/2important-tips-for-creating-a-ledger-in-excel/function.webp"
+				srcset="/blog/2important-tips-for-creating-a-ledger-in-excel/function_hucbd8c56ce49c29adc390ebc609783b62_3492_480x0_resize_q75_h2_box_2.webp 480w, /blog/2important-tips-for-creating-a-ledger-in-excel/function_hucbd8c56ce49c29adc390ebc609783b62_3492_1024x0_resize_q75_h2_box_2.webp 1024w"
+				width="746"
+				height="48"
+				loading="lazy"
+				alt="在庫を求める関数">
+		</a>
+		
+		<figcaption>在庫を求める関数</figcaption>
+		
+	</figure></p>
+<p>そのため、まずは用途ごとにシートを分けることをおすすめします。</p>
+<p>例として、購入履歴と、在庫の管理、払い出しの管理の3つくらいに分けます。それ以外の分け方としては入力用シートと出力用シート、集計用シートといった分け方をする場合もあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>これらのコツを踏まえて改善した台帳がこちらです。</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/aNXLoAh2zJw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p>入力規則や関数などを使って手入力がほとんど必要なくなったので、自動的に在庫数が変動したり、間違いのない入力ができるようになりました。金額や日付の欄も、整数や日付以外は入力できないようにしています。そのため、これらの欄で文字を入力するとエラーとなります。</p>
+<p>また、一見わかりにくかった関数も、シートが分かれたことで、どんなことをしているのか比較的わかりやすくなりました。</p>
+<p>今回作成した台帳のサンプルは<a class="link" href="https://drive.google.com/uc?export=download&amp;id=1c8jzIeb-XAtqMTN6jX8O7S08tQ76AvR2"  target="_blank" rel="noopener"
+    >こちらから</a>ダウンロードいただけます。</p>
+
+</section>
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.linkup.works%2fblog%2f2important-tips-for-creating-a-ledger-in-excel%2f&text=Excel%20%e3%81%a7%e5%8f%b0%e5%b8%b3%e3%82%92%e4%bd%9c%e3%82%8b%e3%81%a8%e3%81%8d%e3%81%ae2%e3%81%a4%e3%81%ae%e9%87%8d%e8%a6%81%e3%81%aa%e3%82%b3%e3%83%84%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Tweet"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.linkup.works%2fblog%2f2important-tips-for-creating-a-ledger-in-excel%2f&title=Excel%20%e3%81%a7%e5%8f%b0%e5%b8%b3%e3%82%92%e4%bd%9c%e3%82%8b%e3%81%a8%e3%81%8d%e3%81%ae2%e3%81%a4%e3%81%ae%e9%87%8d%e8%a6%81%e3%81%aa%e3%82%b3%e3%83%84%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.linkup.works%2fblog%2f2important-tips-for-creating-a-ledger-in-excel%2f&t=Excel%20%e3%81%a7%e5%8f%b0%e5%b8%b3%e3%82%92%e4%bd%9c%e3%82%8b%e3%81%a8%e3%81%8d%e3%81%ae2%e3%81%a4%e3%81%ae%e9%87%8d%e8%a6%81%e3%81%aa%e3%82%b3%e3%83%84%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.linkup.works%2fblog%2f2important-tips-for-creating-a-ledger-in-excel%2f&title=Excel%20%e3%81%a7%e5%8f%b0%e5%b8%b3%e3%82%92%e4%bd%9c%e3%82%8b%e3%81%a8%e3%81%8d%e3%81%ae2%e3%81%a4%e3%81%ae%e9%87%8d%e8%a6%81%e3%81%aa%e3%82%b3%e3%83%84%20%7c%20%e5%90%88%e5%90%8c%e4%bc%9a%e7%a4%be%20Linkup" target="_blank" title="pocket"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/excel/">Excel</a>
+        
+            <a href="/tags/%E7%AE%A1%E7%90%86%E5%8F%B0%E5%B8%B3/">管理台帳</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span class="article-time--modified">
+            最終更新 2021年 8月 3日
+        </span>
+    </section></footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">関連するコンテンツ</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/blog/lets-systemize-excel-ledger-with-kintone/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/lets-systemize-excel-ledger-with-kintone/title.1e4ca51e4f50dabedf72254e8b3bb573_hu5eaa81537ac256d29cda59d033413619_27046_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-HkylHk9Q2r7fciVOizu1cw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">kintone で Excel 台帳をシステム化しよう</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/tips-and-limitations-of-creating-an-excel-ledger/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/tips-and-limitations-of-creating-an-excel-ledger/_hu9f8e920ddd3652413b71c7721c2a3d9b_71102_8610181c132d9c729c96c8eaf25674ed.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-3nlcSm9RIPiDIdxONrPR1Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Excel での管理台帳作成のコツとその限界</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/3reasons-why-you-should-streamline-your-paperwork-and-6tips/_hua97b4ceb40d43b5408ce6c6146a0cf02_91496_bd26e668d0b969f0544ca372725976f6.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-kYuWwl/zFT75bv7MCH6X4g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">事務作業を効率化すべき3つの理由と6つのコツ</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/disadvantages-of-attribution-and-how-to-resolve/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/disadvantages-of-attribution-and-how-to-resolve/_hubdd1b4681019a3b367ec4a16609af947_49350_460c365d2fafde8fd7f0b625fd516c6a.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-VJx0m8oJkbzY6w/RAve&#43;9Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">業務の属人化のデメリットと解消方法</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/blog/how-to-send-faxes-more-easily-with-online-fax-service/">
+        
+        
+            <div class="article-image">
+                <img src="/blog/how-to-send-faxes-more-easily-with-online-fax-service/fax.f35492c567509cbe1c3eaaa65da2a5f4_hu373efeb9c999d573308c71643b50f26a_11610_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-81SSxWdQnL4cPqqmXaKl9A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">オンラインFAX でもっと手軽に FAX を送る方法</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 合同会社 Linkup
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.4.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <h2 class="widget-title section-title">目次</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#台帳を見直すその前に">台帳を見直すその前に</a>
+      <ol>
+        <li><a href="#台帳で管理している目的を再確認する">台帳で管理している目的を再確認する</a></li>
+        <li><a href="#手順を起こす">手順を起こす</a></li>
+      </ol>
+    </li>
+    <li><a href="#台帳を作るコツ">台帳を作るコツ</a>
+      <ol>
+        <li><a href="#手作業させない">手作業させない</a></li>
+        <li><a href="#役割を明確にしてシンプルにする">役割を明確にしてシンプルにする</a></li>
+      </ol>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

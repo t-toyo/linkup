@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>オンライン会議 on 合同会社 Linkup</title>
+    <link>https://www.linkup.works/tags/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0/</link>
+    <description>Recent content in オンライン会議 on 合同会社 Linkup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Wed, 24 Feb 2021 09:10:00 +0900</lastBuildDate><atom:link href="https://www.linkup.works/tags/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E4%BC%9A%E8%AD%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>オンライン会議のはじめの一歩 | 必要なもの</title>
+      <link>https://www.linkup.works/blog/step-by-step-online-meeting-part1/</link>
+      <pubDate>Wed, 24 Feb 2021 09:10:00 +0900</pubDate>
+      
+      <guid>https://www.linkup.works/blog/step-by-step-online-meeting-part1/</guid>
+      <description>コロナ禍によってオンライン会議ツールを利用したミーティングや商談が一気に浸透し、今ではすっかり珍しいものではなくなりました。オンライン会議ツールと一言で言ってもその数は非常に多く、最も知名度の高い Zoom の他にも、LINE でもオンライン通話ができます。
+Linkup ではビジネス向けの Google Workspace で提供されている Google Meet を利用していますが、この Google Meet は無料版の Gmail を利用している方でも利用することができます。一番の特徴としては使い勝手が非常にシンプルなことです。数クリックするだけで会議を開催して、参加者を招待することができます。
+今回は無料で提供されている Google Meet でオンライン会議を開催する方法と、オンライン会議をするために必要なものについて紹介します。
+Google Meet での会議の始め方 Google Meet を使用するには Google アカウントが必要です。Gmail を利用している方であれば、メールアドレスでログインします。 Google Meet
+ Google Meet ログイン 
+Google アカウントを持っていない方は、こちらから Google アカウントの作成を行ってください。
+ログインをしたら『新しい会議を作成』をクリックし、『会議を今すぐ開始』するだけです。画面が切り替わり、オンライン会議がスタートします。  新しい会議の作成   オンライン会議画面 
+参加者を追加する 参加者を追加するには、『ユーザーの追加』をクリックして、追加したい人のメールアドレスに招待メールを送る方法と、参加のためのリンクを共有する方法の2つがあります。メールアドレスがわからない人であっても、このリンクにアクセスしてもらうことで会議に参加できます。招待された人は『参加をリクエスト』します。リクエストが承諾されるとオンライン会議に参加できます。  参加者の追加   参加をリクエスト 
+会議の主催者には次のようなポップアップが表示されるので、『承諾』とすると招待した人が会議に参加できます。  参加の承諾 
+また、オンライン会議の中でチャットや画面の共有などができます。  画面の共有とチャット 
+その他の必要なもの Google アカウント以外に必要なものとしてはマイク付きイヤフォンをおすすめします。iPhone に標準で付属しているイヤフォンもマイクが内蔵されていますが、それ以外でも1000円〜2000円前後で購入することができます。 マイク付きイヤフォン  マイク付きイヤフォン</description>
+    </item>
+    
+  </channel>
+</rss>
